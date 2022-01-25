@@ -1,26 +1,23 @@
 class Api::V1::ChatsController < ApplicationController
   before_action :set_application
   before_action :set_chat, only: %i[ show update destroy ]
+  require_relative "#{Rails.root}/app/services/publisher_service"
 
-
-  # GET /chats
-  # GET /chats.json
   def index
     @chats = @application.chats
     render "index",locals: {chats: @chats},status: :ok
   end
 
-  # GET /chats/1
-  # GET /chats/1.json
+
   def show
     render "show"
   end
 
-  # POST /chats
-  # POST /chats.json
+
   def create
     @chat = @application.chats.build
-
+    @chat.number = get_new_chat_number
+    PublisherService.publish("chats",@chat.attributes)
     if @chat.save
       render "show", status: :created
     else
@@ -28,8 +25,6 @@ class Api::V1::ChatsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /chats/1
-  # PATCH/PUT /chats/1.json
   def update
     if @chat.update(chat_params)
       render "show", status: :ok, location: @chat
@@ -38,19 +33,25 @@ class Api::V1::ChatsController < ApplicationController
     end
   end
 
-  # DELETE /chats/1
-  # DELETE /chats/1.json
   def destroy
     @chat.destroy
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_chat
       @chat = @application.chats.find_by(number: params[:number])
     end
-
-    # Only allow a list of trusted parameters through.
+    def get_new_chat_number
+      redis= RedisHelper.new()
+      number = redis.get_from_redis("app_#{@application.token}_chat_ready_number")
+      if !number
+          redis.save_in_redis("app_#{@application.token}_chat_ready_number",1)
+          number = 1
+      end 
+      redis.increment_counter("app_#{@application.token}_chat_ready_number")
+      number
+    end
+    
     def chat_params
       params.require(:chat).permit()
     end

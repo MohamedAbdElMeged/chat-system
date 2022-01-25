@@ -36,5 +36,3 @@ EXPOSE 3000
 CMD ["rails", "server", "-b", "0.0.0.0"]
 
 
-FROM rabbitmq:3.8-management
-RUN rabbitmq-plugins enable --offline rabbitmq_mqtt rabbitmq_federation_management rabbitmq_stomp
