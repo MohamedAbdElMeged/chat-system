@@ -21,7 +21,11 @@ class Api::V1::MessagesController < ApplicationController
         render "show"
     end
     def update
-        
+        if @message.update(message_params)
+            render "show", status: :ok
+          else
+            render json: @message.errors, status: :unprocessable_entity
+          end
     end
     def destroy
         @message.destroy
