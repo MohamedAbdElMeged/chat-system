@@ -1,4 +1,4 @@
-class Redis
+class RedisService
     def initialize
         @redis = $redis
     end

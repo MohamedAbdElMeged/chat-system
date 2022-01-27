@@ -1,4 +1,4 @@
-class Publisher
+class PublisherService
 
     def self.publish(queue, message = {})
         @connection ||= $bunny.tap do |c|

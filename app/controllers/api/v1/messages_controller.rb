@@ -10,7 +10,7 @@ class Api::V1::MessagesController < ApplicationController
         @message = @chat.messages.build(message_params)
         @message.number = get_new_message_number
         if @message.valid?
-            Publisher.publish("messages",@message)
+            PublisherService.publish("messages",@message)
             render "show",status: :created
         else
             render json: @message.errors , status: :unprocessable_entity
@@ -40,7 +40,7 @@ class Api::V1::MessagesController < ApplicationController
         params.require(:message).permit(:body)
     end 
     def get_new_message_number
-        redis= RedisHelper.new()
+        redis= RedisService.new()
         number = redis.get_from_redis("app_#{@application.token}_chat#{@chat.number}_message_ready_number")
         if !number
             redis.save_in_redis("app_#{@application.token}_chat#{@chat.number}_message_ready_number",1)

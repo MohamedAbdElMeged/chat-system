@@ -17,7 +17,7 @@ class Api::V1::ChatsController < ApplicationController
     @chat = @application.chats.build
     @chat.number = get_new_chat_number
     if @chat.valid?
-      Publisher.publish("chats",@chat)
+      PublisherService.publish("chats",@chat)
       render "show", status: :created
     else
       render json: @chat.errors, status: :unprocessable_entity
@@ -41,7 +41,7 @@ class Api::V1::ChatsController < ApplicationController
       @chat = @application.chats.find_by(number: params[:number])
     end
     def get_new_chat_number
-      redis= RedisHelper.new()
+      redis= RedisService.new()
       number = redis.get_from_redis("app_#{@application.token}_chat_ready_number")
       if !number
           redis.save_in_redis("app_#{@application.token}_chat_ready_number",1)
