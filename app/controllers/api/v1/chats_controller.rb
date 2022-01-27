@@ -1,7 +1,6 @@
 class Api::V1::ChatsController < ApplicationController
   before_action :set_application
   before_action :set_chat, only: %i[ show update destroy ]
-  require_relative "#{Rails.root}/app/services/publisher_service"
 
   def index
     @chats = @application.chats
@@ -17,8 +16,8 @@ class Api::V1::ChatsController < ApplicationController
   def create
     @chat = @application.chats.build
     @chat.number = get_new_chat_number
-    PublisherService.publish("chats",@chat.attributes)
-    if @chat.save
+    if @chat.valid?
+      Publisher.publish("chats",@chat)
       render "show", status: :created
     else
       render json: @chat.errors, status: :unprocessable_entity
@@ -27,7 +26,7 @@ class Api::V1::ChatsController < ApplicationController
 
   def update
     if @chat.update(chat_params)
-      render "show", status: :ok, location: @chat
+      render "show", status: :ok
     else
       render json: @chat.errors, status: :unprocessable_entity
     end

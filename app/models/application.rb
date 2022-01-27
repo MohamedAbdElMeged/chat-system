@@ -3,6 +3,6 @@ class Application < ApplicationRecord
     before_create :generate_application_token , on: :create
     
     def generate_application_token
-        self.token = GenerateApplicationTokenHelper.new.create_token()
+        self.token = GenerateApplicationTokenHelper.new
     end
 end

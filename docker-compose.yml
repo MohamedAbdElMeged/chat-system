@@ -19,7 +19,7 @@ services:
       MYSQL_ALLOW_EMPTY_PASSWORD: 1
   redis:
     image: redis:alpine
-
+    restart: always
     ports:
       - '6380:6379'
     volumes:
@@ -65,12 +65,13 @@ services:
     volumes:
       - .:/app
     links:
+      - rabbitmq
       - db
       - redis
       - es
-      - rabbitmq
     depends_on:
       - web
+      - rabbitmq
     environment:
       - WORKERS=ChatWorker,MessageWorker
       - MYSQL_HOST=db

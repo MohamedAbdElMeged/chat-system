@@ -2,8 +2,6 @@ class Api::V1::MessagesController < ApplicationController
     before_action :set_application
     before_action :set_chat
     before_action :set_message,only: [:show,:update ,:destroy]
-  require_relative "#{Rails.root}/app/services/publisher_service"
-
     def index
         @messages = @chat.messages
         render "index"
@@ -11,12 +9,13 @@ class Api::V1::MessagesController < ApplicationController
     def create
         @message = @chat.messages.build(message_params)
         @message.number = get_new_message_number
-        PublisherService.publish("messages",@message)
-        if @message.save!
-            render "show" , status: :created
+        if @message.valid?
+            Publisher.publish("messages",@message)
+            render "show",status: :created
         else
-            render @message.errors, status: :unprocessable_entity
+            render json: @message.errors , status: :unprocessable_entity
         end
+
     end
     def show
         render "show"
@@ -50,11 +49,4 @@ class Api::V1::MessagesController < ApplicationController
         redis.increment_counter("app_#{@application.token}_chat#{@chat.number}_message_ready_number")
         number
       end
-      
-    
-    
-    
-    
-    
-    
 end

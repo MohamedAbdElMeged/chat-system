@@ -1,4 +1,4 @@
-class RedisHelper
+class Redis
     def initialize
         @redis = $redis
     end
@@ -17,7 +17,4 @@ class RedisHelper
     def increment_counter(key)
         @redis.incr(key)
     end
-    
-    
-    
 end

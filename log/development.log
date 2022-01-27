@@ -3036,3 +3036,1219 @@ Completed 201 Created in 71ms (Views: 29.7ms | ActiveRecord: 29.4ms)
   [1m[36mChat Load (0.4ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` ORDER BY `chats`.`id` DESC LIMIT 1[0m
   [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   [1m[36mChat Load (0.4ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` ORDER BY `chats`.`id` DESC LIMIT 1[0m
+  [1m[35m (12.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE `app_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE `app_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (2.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0)[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (13.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (11.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470')[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mChat Load (1.3ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` ORDER BY `chats`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mChat Load (0.5ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` ORDER BY `chats`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mChat Load (0.6ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` ORDER BY `chats`.`id` DESC LIMIT 1[0m
+  [1m[35m (15.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE `app_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE DATABASE `app_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0)[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (16.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470')[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE DATABASE `app_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE DATABASE `app_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0)[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (23.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (4.6ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (7.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470')[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mChat Load (1.7ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` ORDER BY `chats`.`id` DESC LIMIT 1[0m
+  [1m[36mChat Load (0.4ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` ORDER BY `chats`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mChat Load (0.5ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` ORDER BY `chats`.`id` DESC LIMIT 1[0m
+  [1m[36mChat Load (1.6ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` ORDER BY `chats`.`id` ASC LIMIT 1[0m
+  [1m[36mChat Load (1.4ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` ORDER BY `chats`.`id` ASC LIMIT 1[0m
+  [1m[35m (2.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/chat_worker.rb:7
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/chat_worker.rb:9
+  [1m[36mApplication Load (3.7ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`id` = 3 LIMIT 1[0m
+  ↳ app/workers/chat_worker.rb:9
+  [1m[36mApplication Load (28.0ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`id` = 3 LIMIT 1[0m
+  ↳ app/workers/chat_worker.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/chat_worker.rb:10
+  [1m[36mChat Create (1.3ms)[0m  [1m[32mINSERT INTO `chats` (`number`, `application_id`, `created_at`, `updated_at`) VALUES (987, 3, '2022-01-26 16:11:15', '2022-01-26 16:11:15')[0m
+  ↳ app/workers/chat_worker.rb:10
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/chat_worker.rb:10
+  [1m[36mChat Create (1.0ms)[0m  [1m[32mINSERT INTO `chats` (`number`, `application_id`, `created_at`, `updated_at`) VALUES (987, 3, '2022-01-26 16:11:15', '2022-01-26 16:11:15')[0m
+  ↳ app/workers/chat_worker.rb:10
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/chat_worker.rb:10
+  [1m[35m (10.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/chat_worker.rb:10
+  [1m[36mChat Load (1.6ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` ORDER BY `chats`.`id` DESC LIMIT 1[0m
+Started POST "/api/v1/applications" for 172.20.0.1 at 2022-01-26 16:16:51 +0000
+  [1m[35m (1.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app5911", "application"=>{"name"=>"app5911"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:19
+  [1m[36mApplication Create (0.6ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('app5911', 'QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz', '2022-01-26 16:16:52', '2022-01-26 16:16:52')[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:19
+  [1m[35m (11.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:19
+  Rendering api/v1/applications/show.json.jbuilder
+  Rendered api/v1/applications/_application.json.jbuilder (0.5ms)
+  Rendered api/v1/applications/show.json.jbuilder (4.6ms)
+Completed 201 Created in 61ms (Views: 13.1ms | ActiveRecord: 26.7ms)
+
+
+Started POST "/api/v1/applications/QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz/chats" for 172.20.0.1 at 2022-01-26 16:17:01 +0000
+Processing by Api::V1::ChatsController#create as */*
+  Parameters: {"application_token"=>"QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz"}
+  [1m[36mApplication Load (3.9ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz' LIMIT 1[0m
+  ↳ app/controllers/api/v1/chats_controller.rb:60
+  Rendering api/v1/chats/show.json.jbuilder
+  Rendered api/v1/chats/_chat.json.jbuilder (0.4ms)
+  Rendered api/v1/chats/show.json.jbuilder (2.3ms)
+Completed 200 OK in 99ms (Views: 7.2ms | ActiveRecord: 13.3ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/chat_worker.rb:8
+  [1m[35m (3.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE DATABASE `app_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE `app_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (6.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0)[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (72.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (11.7ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (23.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (12.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470')[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (16.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+Started POST "/api/v1/applications/QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz/chats" for 172.20.0.1 at 2022-01-26 16:19:42 +0000
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::ChatsController#create as */*
+  Parameters: {"application_token"=>"QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz"}
+  [1m[36mApplication Load (1.3ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz' LIMIT 1[0m
+  ↳ app/controllers/api/v1/chats_controller.rb:60
+  Rendering api/v1/chats/show.json.jbuilder
+  Rendered api/v1/chats/_chat.json.jbuilder (0.5ms)
+  Rendered api/v1/chats/show.json.jbuilder (4.7ms)
+Completed 200 OK in 108ms (Views: 13.1ms | ActiveRecord: 28.9ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/chat_worker.rb:8
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE `app_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (9.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE `app_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0)[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (11.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (8.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (13.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470')[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (12.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+Started POST "/api/v1/applications/QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz/chats" for 172.20.0.1 at 2022-01-26 16:21:04 +0000
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::ChatsController#create as */*
+  Parameters: {"application_token"=>"QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz"}
+  [1m[36mApplication Load (1.4ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz' LIMIT 1[0m
+  ↳ app/controllers/api/v1/chats_controller.rb:60
+  Rendering api/v1/chats/show.json.jbuilder
+  Rendered api/v1/chats/_chat.json.jbuilder (1.1ms)
+  Rendered api/v1/chats/show.json.jbuilder (3.4ms)
+Completed 200 OK in 81ms (Views: 7.9ms | ActiveRecord: 25.3ms)
+
+
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/chat_worker.rb:8
+  [1m[36mApplication Load (0.6ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`id` = 5 LIMIT 1[0m
+  ↳ app/workers/chat_worker.rb:10
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[36mChat Create (1.2ms)[0m  [1m[32mINSERT INTO `chats` (`number`, `application_id`, `created_at`, `updated_at`) VALUES (2, 5, '2022-01-26 16:21:05', '2022-01-26 16:21:05')[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[35m (10.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/chat_worker.rb:11
+Started POST "/api/v1/applications/QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz/chats" for 172.20.0.1 at 2022-01-26 16:21:20 +0000
+Processing by Api::V1::ChatsController#create as */*
+  Parameters: {"application_token"=>"QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz"}
+  [1m[36mApplication Load (0.5ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz' LIMIT 1[0m
+  ↳ app/controllers/api/v1/chats_controller.rb:60
+  Rendering api/v1/chats/show.json.jbuilder
+  Rendered api/v1/chats/_chat.json.jbuilder (0.3ms)
+  Rendered api/v1/chats/show.json.jbuilder (2.7ms)
+Completed 200 OK in 11ms (Views: 5.3ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (2.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/chat_worker.rb:8
+  [1m[36mApplication Load (0.6ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`id` = 5 LIMIT 1[0m
+  ↳ app/workers/chat_worker.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[36mChat Create (0.7ms)[0m  [1m[32mINSERT INTO `chats` (`number`, `application_id`, `created_at`, `updated_at`) VALUES (3, 5, '2022-01-26 16:21:20', '2022-01-26 16:21:20')[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[35m (33.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mChat Load (0.6ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` ORDER BY `chats`.`id` DESC LIMIT 1[0m
+Started POST "/api/v1/applications/QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz/chats" for 172.20.0.1 at 2022-01-26 16:21:47 +0000
+Processing by Api::V1::ChatsController#create as */*
+  Parameters: {"application_token"=>"QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz"}
+  [1m[36mApplication Load (0.5ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz' LIMIT 1[0m
+  ↳ app/controllers/api/v1/chats_controller.rb:60
+  Rendering api/v1/chats/show.json.jbuilder
+  Rendered api/v1/chats/_chat.json.jbuilder (0.3ms)
+  Rendered api/v1/chats/show.json.jbuilder (1.7ms)
+Completed 200 OK in 9ms (Views: 4.1ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/chat_worker.rb:8
+  [1m[36mApplication Load (0.7ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`id` = 5 LIMIT 1[0m
+  ↳ app/workers/chat_worker.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[36mChat Create (0.6ms)[0m  [1m[32mINSERT INTO `chats` (`number`, `application_id`, `created_at`, `updated_at`) VALUES (4, 5, '2022-01-26 16:21:47', '2022-01-26 16:21:47')[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[35m (9.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[36mChat Load (1.6ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` ORDER BY `chats`.`id` DESC LIMIT 1[0m
+Started POST "/api/v1/applications/QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz/chats" for 172.20.0.1 at 2022-01-26 16:22:08 +0000
+Processing by Api::V1::ChatsController#create as */*
+  Parameters: {"application_token"=>"QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz"}
+  [1m[36mApplication Load (0.5ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz' LIMIT 1[0m
+  ↳ app/controllers/api/v1/chats_controller.rb:60
+  Rendering api/v1/chats/show.json.jbuilder
+  Rendered api/v1/chats/_chat.json.jbuilder (0.5ms)
+  Rendered api/v1/chats/show.json.jbuilder (2.6ms)
+Completed 200 OK in 11ms (Views: 5.8ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/chat_worker.rb:8
+  [1m[36mApplication Load (0.6ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`id` = 5 LIMIT 1[0m
+  ↳ app/workers/chat_worker.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[36mChat Create (0.6ms)[0m  [1m[32mINSERT INTO `chats` (`number`, `application_id`, `created_at`, `updated_at`) VALUES (5, 5, '2022-01-26 16:22:08', '2022-01-26 16:22:08')[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[35m (18.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[36mChat Load (1.4ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` ORDER BY `chats`.`id` DESC LIMIT 1[0m
+Started POST "/api/v1/applications/QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz/chats" for 172.20.0.1 at 2022-01-26 16:22:13 +0000
+Processing by Api::V1::ChatsController#create as */*
+  Parameters: {"application_token"=>"QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz"}
+  [1m[36mApplication Load (0.5ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz' LIMIT 1[0m
+  ↳ app/controllers/api/v1/chats_controller.rb:60
+  Rendering api/v1/chats/show.json.jbuilder
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/chat_worker.rb:10
+  [1m[36mApplication Load (0.6ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`id` = 5 LIMIT 1[0m
+  ↳ app/workers/chat_worker.rb:10
+  Rendered api/v1/chats/_chat.json.jbuilder (0.5ms)
+  Rendered api/v1/chats/show.json.jbuilder (2.2ms)
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[36mChat Create (0.6ms)[0m  [1m[32mINSERT INTO `chats` (`number`, `application_id`, `created_at`, `updated_at`) VALUES (6, 5, '2022-01-26 16:22:13', '2022-01-26 16:22:13')[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[35m (37.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[36mChat Load (0.5ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` ORDER BY `chats`.`id` DESC LIMIT 1[0m
+Started POST "/api/v1/applications/QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz/chats" for 172.20.0.1 at 2022-01-26 16:22:18 +0000
+Processing by Api::V1::ChatsController#create as */*
+  Parameters: {"application_token"=>"QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz"}
+  [1m[36mApplication Load (0.6ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz' LIMIT 1[0m
+  ↳ app/controllers/api/v1/chats_controller.rb:60
+  Rendering api/v1/chats/show.json.jbuilder
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/chat_worker.rb:10
+  Rendered api/v1/chats/_chat.json.jbuilder (0.5ms)
+  [1m[36mApplication Load (0.7ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`id` = 5 LIMIT 1[0m
+  ↳ app/workers/chat_worker.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  Rendered api/v1/chats/show.json.jbuilder (2.3ms)
+  ↳ app/workers/chat_worker.rb:11
+Completed 200 OK in 13ms (Views: 7.3ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mChat Create (0.8ms)[0m  [1m[32mINSERT INTO `chats` (`number`, `application_id`, `created_at`, `updated_at`) VALUES (7, 5, '2022-01-26 16:22:18', '2022-01-26 16:22:18')[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[35m (36.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[36mChat Load (0.4ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` ORDER BY `chats`.`id` DESC LIMIT 1[0m
+Started POST "/api/v1/applications/" for 172.20.0.1 at 2022-01-26 16:22:39 +0000
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"sdvdsvdsvdsbdsdb ", "application"=>{"name"=>"sdvdsvdsvdsbdsdb "}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:19
+  [1m[36mApplication Create (0.6ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('sdvdsvdsvdsbdsdb ', 'gTNVPLJsDdMArRQfGsrhucwKNioFLrdMricHsFFjSCZtMdgPbL', '2022-01-26 16:22:39', '2022-01-26 16:22:39')[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:19
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:19
+  Rendering api/v1/applications/show.json.jbuilder
+  Rendered api/v1/applications/_application.json.jbuilder (0.4ms)
+  Rendered api/v1/applications/show.json.jbuilder (2.3ms)
+Completed 201 Created in 19ms (Views: 6.2ms | ActiveRecord: 8.1ms)
+
+
+Started POST "/api/v1/applications/gTNVPLJsDdMArRQfGsrhucwKNioFLrdMricHsFFjSCZtMdgPbL/chats" for 172.20.0.1 at 2022-01-26 16:22:47 +0000
+Processing by Api::V1::ChatsController#create as */*
+  Parameters: {"application_token"=>"gTNVPLJsDdMArRQfGsrhucwKNioFLrdMricHsFFjSCZtMdgPbL"}
+  [1m[36mApplication Load (0.5ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'gTNVPLJsDdMArRQfGsrhucwKNioFLrdMricHsFFjSCZtMdgPbL' LIMIT 1[0m
+  ↳ app/controllers/api/v1/chats_controller.rb:60
+  Rendering api/v1/chats/show.json.jbuilder
+  Rendered api/v1/chats/_chat.json.jbuilder (0.4ms)
+  Rendered api/v1/chats/show.json.jbuilder (2.2ms)
+Completed 200 OK in 10ms (Views: 4.7ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/chat_worker.rb:10
+  [1m[36mApplication Load (0.4ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`id` = 6 LIMIT 1[0m
+  ↳ app/workers/chat_worker.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[36mChat Create (0.5ms)[0m  [1m[32mINSERT INTO `chats` (`number`, `application_id`, `created_at`, `updated_at`) VALUES (1, 6, '2022-01-26 16:22:47', '2022-01-26 16:22:47')[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[35m (92.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[36mChat Load (1.4ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` ORDER BY `chats`.`id` DESC LIMIT 1[0m
+Started POST "/api/v1/applications/QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz/chats" for 172.20.0.1 at 2022-01-26 16:23:04 +0000
+Processing by Api::V1::ChatsController#create as */*
+  Parameters: {"application_token"=>"QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz"}
+  [1m[36mApplication Load (0.5ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'QJDpGPWecvCsovqzLEnAuculqCgPVbNinIWnUBZnNNBFUjyLlz' LIMIT 1[0m
+  ↳ app/controllers/api/v1/chats_controller.rb:60
+  Rendering api/v1/chats/show.json.jbuilder
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/chat_worker.rb:10
+  [1m[36mApplication Load (0.6ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`id` = 5 LIMIT 1[0m
+  ↳ app/workers/chat_worker.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  Rendered api/v1/chats/_chat.json.jbuilder (0.5ms)
+  ↳ app/workers/chat_worker.rb:11
+  Rendered api/v1/chats/show.json.jbuilder (2.3ms)
+Completed 200 OK in 17ms (Views: 11.0ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mChat Create (0.7ms)[0m  [1m[32mINSERT INTO `chats` (`number`, `application_id`, `created_at`, `updated_at`) VALUES (8, 5, '2022-01-26 16:23:04', '2022-01-26 16:23:04')[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[35m (47.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[36mChat Load (1.5ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` ORDER BY `chats`.`id` DESC LIMIT 1[0m
+Started POST "/api/v1/applications/gTNVPLJsDdMArRQfGsrhucwKNioFLrdMricHsFFjSCZtMdgPbL/chats" for 172.20.0.1 at 2022-01-26 16:23:16 +0000
+Processing by Api::V1::ChatsController#create as */*
+  Parameters: {"application_token"=>"gTNVPLJsDdMArRQfGsrhucwKNioFLrdMricHsFFjSCZtMdgPbL"}
+  [1m[36mApplication Load (0.5ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'gTNVPLJsDdMArRQfGsrhucwKNioFLrdMricHsFFjSCZtMdgPbL' LIMIT 1[0m
+  ↳ app/controllers/api/v1/chats_controller.rb:60
+  Rendering api/v1/chats/show.json.jbuilder
+  Rendered api/v1/chats/_chat.json.jbuilder (1.1ms)
+  Rendered api/v1/chats/show.json.jbuilder (2.7ms)
+Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/chat_worker.rb:10
+  [1m[36mApplication Load (0.5ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`id` = 6 LIMIT 1[0m
+  ↳ app/workers/chat_worker.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[36mChat Create (0.6ms)[0m  [1m[32mINSERT INTO `chats` (`number`, `application_id`, `created_at`, `updated_at`) VALUES (2, 6, '2022-01-26 16:23:16', '2022-01-26 16:23:16')[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[36mChat Load (1.5ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` ORDER BY `chats`.`id` DESC LIMIT 1[0m
+  [1m[35m (3.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE `app_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE DATABASE `app_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (1.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0)[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (16.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (7.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470')[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mApplication Load (0.7ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` ORDER BY `applications`.`id` DESC LIMIT 1[0m
+  [1m[36mChat Load (0.7ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` WHERE `chats`.`application_id` = 6 ORDER BY `chats`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/message_worker.rb:8
+  [1m[36mChat Load (14.3ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` WHERE `chats`.`id` = 65 LIMIT 1[0m
+  ↳ app/workers/message_worker.rb:10
+  [1m[35m (9.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/message_worker.rb:11
+  [1m[36mMessage Create (15.1ms)[0m  [1m[32mINSERT INTO `messages` (`number`, `chat_id`, `created_at`, `updated_at`) VALUES (1, 65, '2022-01-26 16:27:57', '2022-01-26 16:27:57')[0m
+  ↳ app/workers/message_worker.rb:11
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/message_worker.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/message_worker.rb:10
+  [1m[36mChat Load (0.5ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` WHERE `chats`.`id` = 65 LIMIT 1[0m
+  ↳ app/workers/message_worker.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/message_worker.rb:11
+  [1m[36mMessage Create (0.5ms)[0m  [1m[32mINSERT INTO `messages` (`number`, `chat_id`, `created_at`, `updated_at`) VALUES (2, 65, '2022-01-26 16:28:31', '2022-01-26 16:28:31')[0m
+  ↳ app/workers/message_worker.rb:11
+  [1m[35m (47.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/message_worker.rb:11
+  [1m[36mMessage Load (1.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` LIMIT 11[0m
+  [1m[36mMessage Load (1.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 65[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `messages` WHERE `messages`.`chat_id` = 65[0m
+Started POST "/api/v1/applications/gTNVPLJsDdMArRQfGsrhucwKNioFLrdMricHsFFjSCZtMdgPbL/chats/2" for 172.20.0.1 at 2022-01-26 16:30:40 +0000
+  [1m[35m (1.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/applications/gTNVPLJsDdMArRQfGsrhucwKNioFLrdMricHsFFjSCZtMdgPbL/chats/2"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/applications/gTNVPLJsDdMArRQfGsrhucwKNioFLrdMricHsFFjSCZtMdgPbL/chats/2" for 172.20.0.1 at 2022-01-26 16:30:46 +0000
+Processing by Api::V1::ChatsController#show as */*
+  Parameters: {"application_token"=>"gTNVPLJsDdMArRQfGsrhucwKNioFLrdMricHsFFjSCZtMdgPbL", "number"=>"2"}
+  [1m[36mApplication Load (2.1ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'gTNVPLJsDdMArRQfGsrhucwKNioFLrdMricHsFFjSCZtMdgPbL' LIMIT 1[0m
+  ↳ app/controllers/api/v1/chats_controller.rb:60
+  [1m[36mChat Load (0.4ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` WHERE `chats`.`application_id` = 6 AND `chats`.`number` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/chats_controller.rb:43
+  Rendering api/v1/chats/show.json.jbuilder
+  Rendered api/v1/chats/_chat.json.jbuilder (0.3ms)
+  Rendered api/v1/chats/show.json.jbuilder (1.6ms)
+Completed 200 OK in 78ms (Views: 8.6ms | ActiveRecord: 24.8ms)
+
+
+Started GET "/api/v1/applications/gTNVPLJsDdMArRQfGsrhucwKNioFLrdMricHsFFjSCZtMdgPbL/chats/2/messages" for 172.20.0.1 at 2022-01-26 16:30:57 +0000
+Processing by Api::V1::MessagesController#index as */*
+  Parameters: {"application_token"=>"gTNVPLJsDdMArRQfGsrhucwKNioFLrdMricHsFFjSCZtMdgPbL", "chat_number"=>"2"}
+  [1m[36mApplication Load (0.5ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'gTNVPLJsDdMArRQfGsrhucwKNioFLrdMricHsFFjSCZtMdgPbL' LIMIT 1[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:32
+  [1m[36mChat Load (0.6ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` WHERE `chats`.`application_id` = 6 AND `chats`.`number` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:35
+  Rendering api/v1/messages/index.json.jbuilder
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 65[0m
+  ↳ app/views/api/v1/messages/index.json.jbuilder:1
+  Rendered api/v1/messages/_message.json.jbuilder (0.5ms)
+  Rendered api/v1/messages/_message.json.jbuilder (0.1ms)
+  Rendered api/v1/messages/index.json.jbuilder (22.0ms)
+Completed 200 OK in 34ms (Views: 18.2ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/api/v1/applications/gTNVPLJsDdMArRQfGsrhucwKNioFLrdMricHsFFjSCZtMdgPbL/chats/2/messages" for 172.20.0.1 at 2022-01-26 16:32:13 +0000
+Processing by Api::V1::MessagesController#index as */*
+  Parameters: {"application_token"=>"gTNVPLJsDdMArRQfGsrhucwKNioFLrdMricHsFFjSCZtMdgPbL", "chat_number"=>"2"}
+  [1m[36mApplication Load (0.6ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'gTNVPLJsDdMArRQfGsrhucwKNioFLrdMricHsFFjSCZtMdgPbL' LIMIT 1[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:32
+  [1m[36mChat Load (0.6ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` WHERE `chats`.`application_id` = 6 AND `chats`.`number` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:35
+  Rendering api/v1/messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 65[0m
+  ↳ app/views/api/v1/messages/index.json.jbuilder:1
+  Rendered api/v1/messages/_message.json.jbuilder (0.4ms)
+  Rendered api/v1/messages/_message.json.jbuilder (0.1ms)
+  Rendered api/v1/messages/index.json.jbuilder (5.0ms)
+Completed 200 OK in 12ms (Views: 7.9ms | ActiveRecord: 1.6ms)
+
+
+  [1m[36mMessage Load (1.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 65 AND `messages`.`number` = 1 LIMIT 1[0m
+  [1m[36mMessage Load (1.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 65 AND `messages`.`number` = 2 LIMIT 1[0m
+  [1m[36mApplication Load (1.5ms)[0m  [1m[34mSELECT `applications`.* FROM `applications`[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChat Load (1.9ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`application_id` = 3[0m
+  [1m[36mMessage Load (2.2ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 16[0m
+  [1m[36mMessage Destroy (3.1ms)[0m  [1m[31mDELETE FROM `messages` WHERE `messages`.`id` = 3[0m
+  [1m[36mChat Destroy (1.9ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 16[0m
+  [1m[36mMessage Load (2.2ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 17[0m
+  [1m[36mChat Destroy (2.7ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 17[0m
+  [1m[36mMessage Load (3.1ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 18[0m
+  [1m[36mChat Destroy (1.9ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 18[0m
+  [1m[36mMessage Load (1.9ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 19[0m
+  [1m[36mChat Destroy (1.0ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 19[0m
+  [1m[36mMessage Load (1.2ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 20[0m
+  [1m[36mMessage Destroy (0.9ms)[0m  [1m[31mDELETE FROM `messages` WHERE `messages`.`id` = 4[0m
+  [1m[36mMessage Destroy (0.9ms)[0m  [1m[31mDELETE FROM `messages` WHERE `messages`.`id` = 5[0m
+  [1m[36mMessage Destroy (0.8ms)[0m  [1m[31mDELETE FROM `messages` WHERE `messages`.`id` = 6[0m
+  [1m[36mMessage Destroy (0.8ms)[0m  [1m[31mDELETE FROM `messages` WHERE `messages`.`id` = 7[0m
+  [1m[36mMessage Destroy (0.9ms)[0m  [1m[31mDELETE FROM `messages` WHERE `messages`.`id` = 8[0m
+  [1m[36mMessage Destroy (0.7ms)[0m  [1m[31mDELETE FROM `messages` WHERE `messages`.`id` = 9[0m
+  [1m[36mMessage Destroy (0.7ms)[0m  [1m[31mDELETE FROM `messages` WHERE `messages`.`id` = 10[0m
+  [1m[36mChat Destroy (0.8ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 20[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 21[0m
+  [1m[36mChat Destroy (0.7ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 21[0m
+  [1m[36mMessage Load (1.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 22[0m
+  [1m[36mChat Destroy (1.2ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 22[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 25[0m
+  [1m[36mChat Destroy (0.6ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 25[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 26[0m
+  [1m[36mChat Destroy (0.6ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 26[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 27[0m
+  [1m[36mChat Destroy (0.6ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 27[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 28[0m
+  [1m[36mChat Destroy (0.6ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 28[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 29[0m
+  [1m[36mChat Destroy (0.7ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 29[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 30[0m
+  [1m[36mChat Destroy (1.5ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 30[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 31[0m
+  [1m[36mChat Destroy (0.7ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 31[0m
+  [1m[36mMessage Load (1.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 32[0m
+  [1m[36mChat Destroy (0.6ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 32[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 33[0m
+  [1m[36mChat Destroy (0.6ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 33[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 34[0m
+  [1m[36mChat Destroy (0.6ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 34[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 35[0m
+  [1m[36mChat Destroy (0.9ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 35[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 36[0m
+  [1m[36mChat Destroy (0.6ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 36[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 37[0m
+  [1m[36mChat Destroy (0.6ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 37[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 38[0m
+  [1m[36mChat Destroy (0.7ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 38[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 39[0m
+  [1m[36mChat Destroy (0.5ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 39[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 40[0m
+  [1m[36mChat Destroy (0.6ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 40[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 41[0m
+  [1m[36mChat Destroy (1.0ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 41[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 42[0m
+  [1m[36mChat Destroy (0.6ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 42[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 43[0m
+  [1m[36mChat Destroy (0.6ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 43[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 44[0m
+  [1m[36mChat Destroy (0.8ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 44[0m
+  [1m[36mMessage Load (1.2ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 45[0m
+  [1m[36mChat Destroy (0.7ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 45[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 46[0m
+  [1m[36mChat Destroy (0.8ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 46[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 47[0m
+  [1m[36mChat Destroy (0.6ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 47[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 48[0m
+  [1m[36mChat Destroy (0.9ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 48[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 49[0m
+  [1m[36mChat Destroy (0.6ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 49[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 50[0m
+  [1m[36mChat Destroy (1.0ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 50[0m
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 51[0m
+  [1m[36mChat Destroy (0.8ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 51[0m
+  [1m[36mMessage Load (1.1ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 52[0m
+  [1m[36mChat Destroy (1.9ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 52[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 53[0m
+  [1m[36mChat Destroy (0.7ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 53[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 54[0m
+  [1m[36mChat Destroy (0.7ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 54[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 55[0m
+  [1m[36mChat Destroy (0.8ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 55[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 56[0m
+  [1m[36mChat Destroy (2.6ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 56[0m
+  [1m[36mApplication Destroy (1.0ms)[0m  [1m[31mDELETE FROM `applications` WHERE `applications`.`id` = 3[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChat Load (2.0ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`application_id` = 4[0m
+  [1m[36mMessage Load (1.4ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 14[0m
+  [1m[36mChat Destroy (0.6ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 14[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 15[0m
+  [1m[36mMessage Destroy (1.0ms)[0m  [1m[31mDELETE FROM `messages` WHERE `messages`.`id` = 2[0m
+  [1m[36mChat Destroy (0.7ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 15[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 23[0m
+  [1m[36mChat Destroy (1.7ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 23[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 24[0m
+  [1m[36mMessage Destroy (0.7ms)[0m  [1m[31mDELETE FROM `messages` WHERE `messages`.`id` = 1[0m
+  [1m[36mChat Destroy (0.7ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 24[0m
+  [1m[36mApplication Destroy (1.1ms)[0m  [1m[31mDELETE FROM `applications` WHERE `applications`.`id` = 4[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChat Load (0.7ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`application_id` = 5[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 57[0m
+  [1m[36mChat Destroy (0.9ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 57[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 58[0m
+  [1m[36mChat Destroy (0.8ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 58[0m
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 59[0m
+  [1m[36mChat Destroy (0.8ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 59[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 60[0m
+  [1m[36mChat Destroy (0.7ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 60[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 61[0m
+  [1m[36mChat Destroy (1.4ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 61[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 62[0m
+  [1m[36mChat Destroy (0.8ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 62[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 64[0m
+  [1m[36mChat Destroy (0.7ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 64[0m
+  [1m[36mApplication Destroy (0.8ms)[0m  [1m[31mDELETE FROM `applications` WHERE `applications`.`id` = 5[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChat Load (0.9ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`application_id` = 6[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 63[0m
+  [1m[36mChat Destroy (0.7ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 63[0m
+  [1m[36mMessage Load (1.1ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 65[0m
+  [1m[36mMessage Destroy (0.7ms)[0m  [1m[31mDELETE FROM `messages` WHERE `messages`.`id` = 11[0m
+  [1m[36mMessage Destroy (0.7ms)[0m  [1m[31mDELETE FROM `messages` WHERE `messages`.`id` = 12[0m
+  [1m[36mChat Destroy (5.8ms)[0m  [1m[31mDELETE FROM `chats` WHERE `chats`.`id` = 65[0m
+  [1m[36mApplication Destroy (0.8ms)[0m  [1m[31mDELETE FROM `applications` WHERE `applications`.`id` = 6[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mApplication Load (1.4ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` ORDER BY `applications`.`id` ASC LIMIT 1[0m
+  [1m[36mChat Load (1.5ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` ORDER BY `chats`.`id` ASC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` ORDER BY `messages`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE `app_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (1.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE `app_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0)[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (20.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (15.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (4.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470')[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+Started GET "/api/v1/applications/" for 172.20.0.1 at 2022-01-26 16:36:03 +0000
+  [1m[35m (1.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::ApplicationsController#index as */*
+  Parameters: {"name"=>"app1 ", "application"=>{"name"=>"app1 "}}
+  Rendering api/v1/applications/index.json.jbuilder
+  [1m[36mApplication Load (0.5ms)[0m  [1m[34mSELECT `applications`.* FROM `applications`[0m
+  ↳ app/views/api/v1/applications/index.json.jbuilder:1
+  Rendered api/v1/applications/index.json.jbuilder (2.0ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/api/v1/applications/" for 172.20.0.1 at 2022-01-26 16:36:08 +0000
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app1 ", "application"=>{"name"=>"app1 "}}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:19
+  [1m[36mApplication Create (1.1ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('app1 ', 'AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV', '2022-01-26 16:36:08', '2022-01-26 16:36:08')[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:19
+  [1m[35m (15.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:19
+  Rendering api/v1/applications/show.json.jbuilder
+  Rendered api/v1/applications/_application.json.jbuilder (0.5ms)
+  Rendered api/v1/applications/show.json.jbuilder (3.1ms)
+Completed 201 Created in 48ms (Views: 7.1ms | ActiveRecord: 29.4ms)
+
+
+Started POST "/api/v1/applications/" for 172.20.0.1 at 2022-01-26 16:36:18 +0000
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app2 ", "application"=>{"name"=>"app2 "}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:19
+  [1m[36mApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('app2 ', 'QfxFTMqKXGKMwuGrUqzvQavKCgTHmMMmQqTzWiNaPHBLALWuHO', '2022-01-26 16:36:18', '2022-01-26 16:36:18')[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:19
+  [1m[35m (34.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:19
+  Rendering api/v1/applications/show.json.jbuilder
+  Rendered api/v1/applications/_application.json.jbuilder (0.4ms)
+  Rendered api/v1/applications/show.json.jbuilder (2.2ms)
+Completed 201 Created in 44ms (Views: 5.1ms | ActiveRecord: 34.9ms)
+
+
+Started POST "/api/v1/applications/" for 172.20.0.1 at 2022-01-26 16:36:29 +0000
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app3", "application"=>{"name"=>"app3"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:19
+  [1m[36mApplication Create (0.6ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('app3', 'FGvSVfmLoftGUNWtosrdgyOlUJeOuBESiKRvWEMXEiREgxTvNL', '2022-01-26 16:36:29', '2022-01-26 16:36:29')[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:19
+  [1m[35m (34.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:19
+  Rendering api/v1/applications/show.json.jbuilder
+  Rendered api/v1/applications/_application.json.jbuilder (0.6ms)
+  Rendered api/v1/applications/show.json.jbuilder (5.3ms)
+Completed 201 Created in 55ms (Views: 16.5ms | ActiveRecord: 34.8ms)
+
+
+Started POST "/api/v1/applications/AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV/chats" for 172.20.0.1 at 2022-01-26 16:36:42 +0000
+Processing by Api::V1::ChatsController#create as */*
+  Parameters: {"application_token"=>"AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV"}
+  [1m[36mApplication Load (0.8ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV' LIMIT 1[0m
+  ↳ app/controllers/api/v1/chats_controller.rb:60
+  Rendering api/v1/chats/show.json.jbuilder
+  Rendered api/v1/chats/_chat.json.jbuilder (0.7ms)
+  Rendered api/v1/chats/show.json.jbuilder (2.6ms)
+Completed 200 OK in 64ms (Views: 11.6ms | ActiveRecord: 12.9ms)
+
+
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/chat_worker.rb:8
+  [1m[36mApplication Load (0.7ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`id` = 7 LIMIT 1[0m
+  ↳ app/workers/chat_worker.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[36mChat Create (0.5ms)[0m  [1m[32mINSERT INTO `chats` (`number`, `application_id`, `created_at`, `updated_at`) VALUES (1, 7, '2022-01-26 16:36:42', '2022-01-26 16:36:42')[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/chat_worker.rb:11
+Started POST "/api/v1/applications/QfxFTMqKXGKMwuGrUqzvQavKCgTHmMMmQqTzWiNaPHBLALWuHO/chats" for 172.20.0.1 at 2022-01-26 16:36:50 +0000
+Processing by Api::V1::ChatsController#create as */*
+  Parameters: {"application_token"=>"QfxFTMqKXGKMwuGrUqzvQavKCgTHmMMmQqTzWiNaPHBLALWuHO"}
+  [1m[36mApplication Load (0.6ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'QfxFTMqKXGKMwuGrUqzvQavKCgTHmMMmQqTzWiNaPHBLALWuHO' LIMIT 1[0m
+  ↳ app/controllers/api/v1/chats_controller.rb:60
+  Rendering api/v1/chats/show.json.jbuilder
+  Rendered api/v1/chats/_chat.json.jbuilder (0.5ms)
+  Rendered api/v1/chats/show.json.jbuilder (2.6ms)
+Completed 200 OK in 22ms (Views: 12.8ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (1.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/chat_worker.rb:8
+  [1m[36mApplication Load (5.6ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`id` = 8 LIMIT 1[0m
+  ↳ app/workers/chat_worker.rb:10
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[36mChat Create (3.9ms)[0m  [1m[32mINSERT INTO `chats` (`number`, `application_id`, `created_at`, `updated_at`) VALUES (1, 8, '2022-01-26 16:36:51', '2022-01-26 16:36:51')[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/chat_worker.rb:11
+Started POST "/api/v1/applications/FGvSVfmLoftGUNWtosrdgyOlUJeOuBESiKRvWEMXEiREgxTvNL/chats" for 172.20.0.1 at 2022-01-26 16:36:58 +0000
+Processing by Api::V1::ChatsController#create as */*
+  Parameters: {"application_token"=>"FGvSVfmLoftGUNWtosrdgyOlUJeOuBESiKRvWEMXEiREgxTvNL"}
+  [1m[36mApplication Load (5.9ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'FGvSVfmLoftGUNWtosrdgyOlUJeOuBESiKRvWEMXEiREgxTvNL' LIMIT 1[0m
+  ↳ app/controllers/api/v1/chats_controller.rb:60
+  Rendering api/v1/chats/show.json.jbuilder
+  Rendered api/v1/chats/_chat.json.jbuilder (0.5ms)
+  Rendered api/v1/chats/show.json.jbuilder (4.9ms)
+Completed 200 OK in 25ms (Views: 11.4ms | ActiveRecord: 5.9ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/chat_worker.rb:8
+  [1m[36mApplication Load (0.6ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`id` = 9 LIMIT 1[0m
+  ↳ app/workers/chat_worker.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[36mChat Create (0.6ms)[0m  [1m[32mINSERT INTO `chats` (`number`, `application_id`, `created_at`, `updated_at`) VALUES (1, 9, '2022-01-26 16:36:58', '2022-01-26 16:36:58')[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/chat_worker.rb:11
+Started POST "/api/v1/applications/AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV/chats" for 172.20.0.1 at 2022-01-26 16:37:04 +0000
+Processing by Api::V1::ChatsController#create as */*
+  Parameters: {"application_token"=>"AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV"}
+  [1m[36mApplication Load (0.5ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV' LIMIT 1[0m
+  ↳ app/controllers/api/v1/chats_controller.rb:60
+  Rendering api/v1/chats/show.json.jbuilder
+  Rendered api/v1/chats/_chat.json.jbuilder (0.6ms)
+  Rendered api/v1/chats/show.json.jbuilder (3.2ms)
+Completed 200 OK in 14ms (Views: 7.4ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (2.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/chat_worker.rb:8
+  [1m[36mApplication Load (0.6ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`id` = 7 LIMIT 1[0m
+  ↳ app/workers/chat_worker.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[36mChat Create (0.8ms)[0m  [1m[32mINSERT INTO `chats` (`number`, `application_id`, `created_at`, `updated_at`) VALUES (2, 7, '2022-01-26 16:37:04', '2022-01-26 16:37:04')[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[35m (33.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/chat_worker.rb:11
+Started POST "/api/v1/applications/FGvSVfmLoftGUNWtosrdgyOlUJeOuBESiKRvWEMXEiREgxTvNL/chats" for 172.20.0.1 at 2022-01-26 16:37:11 +0000
+Processing by Api::V1::ChatsController#create as */*
+  Parameters: {"application_token"=>"FGvSVfmLoftGUNWtosrdgyOlUJeOuBESiKRvWEMXEiREgxTvNL"}
+  [1m[36mApplication Load (0.6ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'FGvSVfmLoftGUNWtosrdgyOlUJeOuBESiKRvWEMXEiREgxTvNL' LIMIT 1[0m
+  ↳ app/controllers/api/v1/chats_controller.rb:60
+  Rendering api/v1/chats/show.json.jbuilder
+  [1m[35m (3.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/chat_worker.rb:10
+  [1m[36mApplication Load (0.8ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`id` = 9 LIMIT 1[0m
+  ↳ app/workers/chat_worker.rb:10
+  Rendered api/v1/chats/_chat.json.jbuilder (0.5ms)
+  [1m[35m (6.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/chat_worker.rb:11
+  Rendered api/v1/chats/show.json.jbuilder (13.4ms)
+  [1m[36mChat Create (2.6ms)[0m  [1m[32mINSERT INTO `chats` (`number`, `application_id`, `created_at`, `updated_at`) VALUES (2, 9, '2022-01-26 16:37:11', '2022-01-26 16:37:11')[0m
+Completed 200 OK in 35ms (Views: 26.7ms | ActiveRecord: 0.6ms)
+
+
+  ↳ app/workers/chat_worker.rb:11
+  [1m[35m (10.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/chat_worker.rb:11
+Started POST "/api/v1/applications/AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV/chats" for 172.20.0.1 at 2022-01-26 16:37:20 +0000
+Processing by Api::V1::ChatsController#create as */*
+  Parameters: {"application_token"=>"AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV"}
+  [1m[36mApplication Load (0.5ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV' LIMIT 1[0m
+  ↳ app/controllers/api/v1/chats_controller.rb:60
+  Rendering api/v1/chats/show.json.jbuilder
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/chat_worker.rb:10
+  [1m[36mApplication Load (0.7ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`id` = 7 LIMIT 1[0m
+  ↳ app/workers/chat_worker.rb:10
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/chat_worker.rb:11
+  Rendered api/v1/chats/_chat.json.jbuilder (0.5ms)
+  Rendered api/v1/chats/show.json.jbuilder (8.0ms)
+Completed 200 OK in 19ms (Views: 11.4ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mChat Create (3.7ms)[0m  [1m[32mINSERT INTO `chats` (`number`, `application_id`, `created_at`, `updated_at`) VALUES (3, 7, '2022-01-26 16:37:20', '2022-01-26 16:37:20')[0m
+  ↳ app/workers/chat_worker.rb:11
+  [1m[35m (31.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/chat_worker.rb:11
+Started GET "/api/v1/applications/AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV/chats" for 172.20.0.1 at 2022-01-26 16:37:23 +0000
+Processing by Api::V1::ChatsController#index as */*
+  Parameters: {"application_token"=>"AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV"}
+  [1m[36mApplication Load (0.7ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV' LIMIT 1[0m
+  ↳ app/controllers/api/v1/chats_controller.rb:60
+  Rendering api/v1/chats/index.json.jbuilder
+  [1m[36mChat Load (0.8ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`application_id` = 7[0m
+  ↳ app/views/api/v1/chats/index.json.jbuilder:1
+  Rendered api/v1/chats/_chat.json.jbuilder (0.4ms)
+  Rendered api/v1/chats/_chat.json.jbuilder (0.1ms)
+  Rendered api/v1/chats/_chat.json.jbuilder (0.1ms)
+  Rendered api/v1/chats/index.json.jbuilder (7.7ms)
+Completed 200 OK in 35ms (Views: 25.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/applications/QfxFTMqKXGKMwuGrUqzvQavKCgTHmMMmQqTzWiNaPHBLALWuHO/chats" for 172.20.0.1 at 2022-01-26 16:37:31 +0000
+Processing by Api::V1::ChatsController#index as */*
+  Parameters: {"application_token"=>"QfxFTMqKXGKMwuGrUqzvQavKCgTHmMMmQqTzWiNaPHBLALWuHO"}
+  [1m[36mApplication Load (0.6ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'QfxFTMqKXGKMwuGrUqzvQavKCgTHmMMmQqTzWiNaPHBLALWuHO' LIMIT 1[0m
+  ↳ app/controllers/api/v1/chats_controller.rb:60
+  Rendering api/v1/chats/index.json.jbuilder
+  [1m[36mChat Load (1.6ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`application_id` = 8[0m
+  ↳ app/views/api/v1/chats/index.json.jbuilder:1
+  Rendered api/v1/chats/_chat.json.jbuilder (0.6ms)
+  Rendered api/v1/chats/index.json.jbuilder (5.5ms)
+Completed 200 OK in 11ms (Views: 7.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/v1/applications/FGvSVfmLoftGUNWtosrdgyOlUJeOuBESiKRvWEMXEiREgxTvNL/chats" for 172.20.0.1 at 2022-01-26 16:37:37 +0000
+Processing by Api::V1::ChatsController#index as */*
+  Parameters: {"application_token"=>"FGvSVfmLoftGUNWtosrdgyOlUJeOuBESiKRvWEMXEiREgxTvNL"}
+  [1m[36mApplication Load (0.5ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'FGvSVfmLoftGUNWtosrdgyOlUJeOuBESiKRvWEMXEiREgxTvNL' LIMIT 1[0m
+  ↳ app/controllers/api/v1/chats_controller.rb:60
+  Rendering api/v1/chats/index.json.jbuilder
+  [1m[36mChat Load (0.7ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`application_id` = 9[0m
+  ↳ app/views/api/v1/chats/index.json.jbuilder:1
+  Rendered api/v1/chats/_chat.json.jbuilder (0.5ms)
+  Rendered api/v1/chats/_chat.json.jbuilder (0.1ms)
+  Rendered api/v1/chats/index.json.jbuilder (7.3ms)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/api/v1/applications/AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV/chats/2/messages" for 172.20.0.1 at 2022-01-26 16:38:07 +0000
+Processing by Api::V1::MessagesController#create as */*
+  Parameters: {"body"=>"hello chat 2 app 1", "application_token"=>"AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV", "chat_number"=>"2", "message"=>{"body"=>"hello chat 2 app 1"}}
+  [1m[36mApplication Load (0.6ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV' LIMIT 1[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:32
+  [1m[36mChat Load (0.7ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` WHERE `chats`.`application_id` = 7 AND `chats`.`number` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:15
+  [1m[36mMessage Create (0.7ms)[0m  [1m[32mINSERT INTO `messages` (`body`, `number`, `chat_id`, `created_at`, `updated_at`) VALUES ('hello chat 2 app 1', 1, 69, '2022-01-26 16:38:07', '2022-01-26 16:38:07')[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ app/workers/message_worker.rb:8
+  [1m[35m (10.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:15
+  Rendering api/v1/messages/show.json.jbuilder
+  Rendered api/v1/messages/_message.json.jbuilder (0.6ms)
+  Rendered api/v1/messages/show.json.jbuilder (9.6ms)
+Completed 201 Created in 69ms (Views: 17.5ms | ActiveRecord: 38.6ms)
+
+
+  [1m[36mChat Load (4.0ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` WHERE `chats`.`id` = 69 LIMIT 1[0m
+  ↳ app/workers/message_worker.rb:11
+  [1m[35m (2.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/message_worker.rb:12
+  [1m[36mMessage Create (1.4ms)[0m  [1m[32mINSERT INTO `messages` (`body`, `number`, `chat_id`, `created_at`, `updated_at`) VALUES ('hello chat 2 app 1', 1, 69, '2022-01-26 16:38:08', '2022-01-26 16:38:08')[0m
+  ↳ app/workers/message_worker.rb:12
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/message_worker.rb:12
+Started GET "/api/v1/applications/AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV/chats/2/messages" for 172.20.0.1 at 2022-01-26 16:38:18 +0000
+Processing by Api::V1::MessagesController#index as */*
+  Parameters: {"body"=>"hello chat 2 app 1", "application_token"=>"AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV", "chat_number"=>"2", "message"=>{"body"=>"hello chat 2 app 1"}}
+  [1m[36mApplication Load (0.5ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV' LIMIT 1[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:32
+  [1m[36mChat Load (0.7ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` WHERE `chats`.`application_id` = 7 AND `chats`.`number` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:35
+  Rendering api/v1/messages/index.json.jbuilder
+  [1m[36mMessage Load (1.4ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_id` = 69[0m
+  ↳ app/views/api/v1/messages/index.json.jbuilder:1
+  Rendered api/v1/messages/_message.json.jbuilder (0.5ms)
+  Rendered api/v1/messages/_message.json.jbuilder (0.1ms)
+  Rendered api/v1/messages/index.json.jbuilder (6.7ms)
+Completed 200 OK in 14ms (Views: 8.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 172.20.0.1 at 2022-01-26 17:17:17 +0000
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  
+TypeError (wrong argument type Class (expected Module)):
+  
+actionpack (5.2.6) lib/abstract_controller/helpers.rb:180:in `include'
+actionpack (5.2.6) lib/abstract_controller/helpers.rb:180:in `block in add_template_helper'
+actionpack (5.2.6) lib/abstract_controller/helpers.rb:180:in `module_eval'
+actionpack (5.2.6) lib/abstract_controller/helpers.rb:180:in `add_template_helper'
+actionpack (5.2.6) lib/abstract_controller/helpers.rb:109:in `block in helper'
+actionpack (5.2.6) lib/abstract_controller/helpers.rb:108:in `each'
+actionpack (5.2.6) lib/abstract_controller/helpers.rb:108:in `helper'
+actionpack (5.2.6) lib/action_controller/railties/helpers.rb:19:in `inherited'
+railties (5.2.6) lib/rails/application_controller.rb:3:in `<main>'
+bootsnap (1.10.2) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+bootsnap (1.10.2) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+activesupport (5.2.6) lib/active_support/dependencies.rb:291:in `block in require'
+activesupport (5.2.6) lib/active_support/dependencies.rb:257:in `load_dependency'
+activesupport (5.2.6) lib/active_support/dependencies.rb:291:in `require'
+railties (5.2.6) lib/rails/welcome_controller.rb:3:in `<main>'
+bootsnap (1.10.2) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+bootsnap (1.10.2) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+activesupport (5.2.6) lib/active_support/dependencies.rb:291:in `block in require'
+activesupport (5.2.6) lib/active_support/dependencies.rb:257:in `load_dependency'
+activesupport (5.2.6) lib/active_support/dependencies.rb:291:in `require'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:285:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:285:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.6) lib/active_support/dependencies.rb:582:in `get'
+activesupport (5.2.6) lib/active_support/dependencies.rb:613:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.6) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.6) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/favicon.ico" for 172.20.0.1 at 2022-01-26 17:17:18 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (2.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE `app_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (19.2ms)[0m  [1m[35mCREATE DATABASE `app_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0)[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (10.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (4.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (19.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (17.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470')[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (2.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE DATABASE `app_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE DATABASE `app_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (3.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0)[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (20.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (8.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470')[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+Started POST "/api/v1/applications/AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV/chats/2/messages" for 172.20.0.1 at 2022-01-26 18:12:45 +0000
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::MessagesController#create as */*
+  Parameters: {"application_token"=>"AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV", "chat_number"=>"2", "message"=>{}}
+  [1m[36mApplication Load (0.5ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV' LIMIT 1[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:31
+  [1m[36mChat Load (0.6ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` WHERE `chats`.`application_id` = 7 AND `chats`.`number` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:34
+Completed 400 Bad Request in 76ms (ActiveRecord: 27.8ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: message):
+  
+app/controllers/api/v1/messages_controller.rb:40:in `message_params'
+app/controllers/api/v1/messages_controller.rb:10:in `create'
+Started POST "/api/v1/applications/AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV/chats/2/messages" for 172.20.0.1 at 2022-01-26 18:12:58 +0000
+Processing by Api::V1::MessagesController#create as */*
+  Parameters: {"body"=>"", "application_token"=>"AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV", "chat_number"=>"2", "message"=>{"body"=>""}}
+  [1m[36mApplication Load (0.6ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV' LIMIT 1[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:31
+  [1m[36mChat Load (0.6ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` WHERE `chats`.`application_id` = 7 AND `chats`.`number` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:34
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 10.5ms)
+
+
+  
+ArgumentError ('#<ActiveModel::Errors:0x0000561d9b3f53e0 @base=#<Message id: nil, body: "", number: 1, chat_id: 69, created_at: nil, updated_at: nil>, @messages={:body=>["can't be blank"]}, @details={:body=>[{:error=>:blank}]}>' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+  
+app/controllers/api/v1/messages_controller.rb:16:in `create'
+  [1m[35m (9.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE `app_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE `app_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0)[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (36.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (9.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470')[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+Started POST "/api/v1/applications/AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV/chats/2/messages" for 172.20.0.1 at 2022-01-26 18:14:21 +0000
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::MessagesController#create as */*
+  Parameters: {"body"=>"", "application_token"=>"AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV", "chat_number"=>"2", "message"=>{"body"=>""}}
+  [1m[36mApplication Load (0.9ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV' LIMIT 1[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:31
+  [1m[36mChat Load (0.6ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` WHERE `chats`.`application_id` = 7 AND `chats`.`number` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:34
+Completed 200 OK in 86ms (Views: 0.2ms | ActiveRecord: 41.7ms)
+
+
+Started POST "/api/v1/applications/AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV/chats/2/messages" for 172.20.0.1 at 2022-01-26 18:15:04 +0000
+Processing by Api::V1::MessagesController#create as */*
+  Parameters: {"body"=>"", "application_token"=>"AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV", "chat_number"=>"2", "message"=>{"body"=>""}}
+  [1m[36mApplication Load (0.5ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV' LIMIT 1[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:31
+  [1m[36mChat Load (0.7ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` WHERE `chats`.`application_id` = 7 AND `chats`.`number` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:34
+Completed 422 Unprocessable Entity in 87ms (Views: 0.2ms | ActiveRecord: 40.7ms)
+
+
+Started POST "/api/v1/applications/AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV/chats/2/messages" for 172.20.0.1 at 2022-01-26 18:15:16 +0000
+Processing by Api::V1::MessagesController#create as */*
+  Parameters: {"body"=>"vdsdsvsd d dsvsdvds ", "application_token"=>"AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV", "chat_number"=>"2", "message"=>{"body"=>"vdsdsvsd d dsvsdvds "}}
+  [1m[36mApplication Load (0.7ms)[0m  [1m[34mSELECT  `applications`.* FROM `applications` WHERE `applications`.`token` = 'AFMxBpmpSbzyMVHXckwEcOjyTTYkEvohFRsQOLDJmtZWxwkGYV' LIMIT 1[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:31
+  [1m[36mChat Load (0.6ms)[0m  [1m[34mSELECT  `chats`.* FROM `chats` WHERE `chats`.`application_id` = 7 AND `chats`.`number` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:34
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.3ms)
+
+
+  
+NameError (uninitialized constant Api::V1::MessagesController::PublisherService):
+  
+app/controllers/api/v1/messages_controller.rb:13:in `create'

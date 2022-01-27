@@ -1,13 +1,14 @@
 class ChatWorker
     include Sneakers::Worker
         
-    from_queue "sneakers.chats", env: nil
+    from_queue "chats", env: nil
 
     def work(raw_chat)
-        x = Chat.new
-        x.number = 987
-        x.application= Application.find(3)
-        x.save!
+        raw_chat= JSON.parse(raw_chat)
+        chat = Chat.new
+        chat.number = raw_chat['number']
+        chat.application= Application.find(raw_chat['application_id'])
+        chat.save!
         ack!
     end
 end
