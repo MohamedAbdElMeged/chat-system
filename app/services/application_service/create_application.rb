@@ -2,19 +2,19 @@ module ApplicationService
     class CreateApplication
         def initialize(name)
             @name = name
-            @token = GenerateApplicationTokenHelper.new
+            @token = GenerateApplicationTokenHelper.new.create_token
         end
         def call
-            
+            create_application
+            @application
         end
+        private
         def create_application
-            @Application.create!({
+            @application = Application.create!({
                 name: @name,
                 token: @token
             })
         end
-        
-        
         
     end
 end

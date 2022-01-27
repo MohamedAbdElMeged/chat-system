@@ -14,8 +14,7 @@ class Api::V1::ApplicationsController < ApplicationController
 
   # POST /applications
   def create
-    @application = Application.new(application_params)
-
+    @application = ApplicationService::CreateApplication.new(params[:name]).call
     if @application.save!
       render "show",status: :created
     else

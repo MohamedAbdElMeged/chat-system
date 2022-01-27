@@ -4252,3 +4252,529 @@ Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.3ms)
 NameError (uninitialized constant Api::V1::MessagesController::PublisherService):
   
 app/controllers/api/v1/messages_controller.rb:13:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE `app_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE `app_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0)[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (7.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470')[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+Started POST "/api/v1/applications" for 172.20.0.1 at 2022-01-27 09:12:03 +0000
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app from solid s ", "application"=>{"name"=>"app from solid s "}}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 2.6ms)
+
+
+  
+NoMethodError (undefined method `create!' for nil:NilClass):
+  
+app/services/application_service/create_application.rb:12:in `create_application'
+app/services/application_service/create_application.rb:8:in `call'
+app/controllers/api/v1/applications_controller.rb:17:in `create'
+Started POST "/api/v1/applications" for 172.20.0.1 at 2022-01-27 09:12:55 +0000
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app from solid s ", "application"=>{"name"=>"app from solid s "}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[36mApplication Create (3.0ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('app from solid s ', '#<GenerateApplicationTokenHelper:0x000055ceb12b9f78>', '2022-01-27 09:12:55', '2022-01-27 09:12:55')[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  Rendering api/v1/applications/show.json.jbuilder
+  Rendered api/v1/applications/_application.json.jbuilder (0.4ms)
+  Rendered api/v1/applications/show.json.jbuilder (2.7ms)
+Completed 201 Created in 44ms (Views: 8.8ms | ActiveRecord: 19.7ms)
+
+
+Started POST "/api/v1/applications" for 172.20.0.1 at 2022-01-27 09:13:25 +0000
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app from solid s ", "application"=>{"name"=>"app from solid s "}}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 2.1ms)
+
+
+  
+NoMethodError (undefined method `token' for #<GenerateApplicationTokenHelper:0x000055ceb01b3328>):
+  
+app/services/application_service/create_application.rb:5:in `initialize'
+app/controllers/api/v1/applications_controller.rb:17:in `new'
+app/controllers/api/v1/applications_controller.rb:17:in `create'
+Started POST "/api/v1/applications" for 172.20.0.1 at 2022-01-27 09:13:56 +0000
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app from solid s ", "application"=>{"name"=>"app from solid s "}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[36mApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('app from solid s ', '#<GenerateApplicationTokenHelper:0x00007fba84088f18>', '2022-01-27 09:13:57', '2022-01-27 09:13:57')[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  Rendering api/v1/applications/show.json.jbuilder
+  Rendered api/v1/applications/_application.json.jbuilder (0.5ms)
+  Rendered api/v1/applications/show.json.jbuilder (2.4ms)
+Completed 201 Created in 73ms (Views: 8.4ms | ActiveRecord: 24.9ms)
+
+
+Started POST "/api/v1/applications" for 172.20.0.1 at 2022-01-27 09:14:18 +0000
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app from solid s ", "application"=>{"name"=>"app from solid s "}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[36mApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('app from solid s ', '#<GenerateApplicationTokenHelper:0x000055ceb1148360>', '2022-01-27 09:14:18', '2022-01-27 09:14:18')[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  Rendering api/v1/applications/show.json.jbuilder
+  Rendered api/v1/applications/_application.json.jbuilder (0.5ms)
+  Rendered api/v1/applications/show.json.jbuilder (2.4ms)
+Completed 201 Created in 36ms (Views: 6.2ms | ActiveRecord: 19.8ms)
+
+
+Started POST "/api/v1/applications" for 172.20.0.1 at 2022-01-27 09:14:21 +0000
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app from solid s ", "application"=>{"name"=>"app from solid s "}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[36mApplication Create (0.7ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('app from solid s ', '#<GenerateApplicationTokenHelper:0x000055ceb102d0c0>', '2022-01-27 09:14:21', '2022-01-27 09:14:21')[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (30.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  Rendering api/v1/applications/show.json.jbuilder
+  Rendered api/v1/applications/_application.json.jbuilder (0.4ms)
+  Rendered api/v1/applications/show.json.jbuilder (2.8ms)
+Completed 201 Created in 44ms (Views: 6.8ms | ActiveRecord: 32.6ms)
+
+
+Started POST "/api/v1/applications" for 172.20.0.1 at 2022-01-27 09:14:46 +0000
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app from solid s ", "application"=>{"name"=>"app from solid s "}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 2.3ms)
+
+
+  
+NoMethodError (undefined method `call' for #<GenerateApplicationTokenHelper:0x00007fba8407d0f0>):
+  
+app/services/application_service/create_application.rb:5:in `initialize'
+app/controllers/api/v1/applications_controller.rb:17:in `new'
+app/controllers/api/v1/applications_controller.rb:17:in `create'
+Started POST "/api/v1/applications" for 172.20.0.1 at 2022-01-27 09:15:08 +0000
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app from solid s ", "application"=>{"name"=>"app from solid s "}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[36mApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('app from solid s ', '#<GenerateApplicationTokenHelper:0x00007fba741b8e48>', '2022-01-27 09:15:08', '2022-01-27 09:15:08')[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  Rendering api/v1/applications/show.json.jbuilder
+  Rendered api/v1/applications/_application.json.jbuilder (0.3ms)
+  Rendered api/v1/applications/show.json.jbuilder (2.0ms)
+Completed 201 Created in 36ms (Views: 5.8ms | ActiveRecord: 17.2ms)
+
+
+Started POST "/api/v1/applications" for 172.20.0.1 at 2022-01-27 09:15:37 +0000
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app from solid s ", "application"=>{"name"=>"app from solid s "}}
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 3.7ms)
+
+
+  
+NoMethodError (undefined method `create_token' for GenerateApplicationTokenHelper:Class):
+  
+app/services/application_service/create_application.rb:5:in `initialize'
+app/controllers/api/v1/applications_controller.rb:17:in `new'
+app/controllers/api/v1/applications_controller.rb:17:in `create'
+Started POST "/api/v1/applications" for 172.20.0.1 at 2022-01-27 09:15:51 +0000
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app from solid s ", "application"=>{"name"=>"app from solid s "}}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.1ms)
+
+
+  
+NoMethodError (undefined method `create_token' for GenerateApplicationTokenHelper:Class):
+  
+app/services/application_service/create_application.rb:5:in `initialize'
+app/controllers/api/v1/applications_controller.rb:17:in `new'
+app/controllers/api/v1/applications_controller.rb:17:in `create'
+Started POST "/api/v1/applications" for 172.20.0.1 at 2022-01-27 09:16:12 +0000
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app from solid s ", "application"=>{"name"=>"app from solid s "}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[36mApplication Create (0.6ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('app from solid s ', '#<GenerateApplicationTokenHelper:0x00007fba8800c540>', '2022-01-27 09:16:12', '2022-01-27 09:16:12')[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  Rendering api/v1/applications/show.json.jbuilder
+  Rendered api/v1/applications/_application.json.jbuilder (0.5ms)
+  Rendered api/v1/applications/show.json.jbuilder (3.1ms)
+Completed 201 Created in 38ms (Views: 6.4ms | ActiveRecord: 18.7ms)
+
+
+Started POST "/api/v1/applications" for 172.20.0.1 at 2022-01-27 09:16:20 +0000
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app from solid s ", "application"=>{"name"=>"app from solid s "}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[36mApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('app from solid s ', '#<GenerateApplicationTokenHelper:0x00007fba6c1ab2f0>', '2022-01-27 09:16:20', '2022-01-27 09:16:20')[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  Rendering api/v1/applications/show.json.jbuilder
+  Rendered api/v1/applications/_application.json.jbuilder (0.3ms)
+  Rendered api/v1/applications/show.json.jbuilder (3.0ms)
+Completed 201 Created in 41ms (Views: 6.3ms | ActiveRecord: 22.5ms)
+
+
+Started POST "/api/v1/applications" for 172.20.0.1 at 2022-01-27 09:16:26 +0000
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app from solid s ", "application"=>{"name"=>"app from solid s "}}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 2.4ms)
+
+
+  
+NoMethodError (undefined method `token' for "TiQjUlrgoJtLlHzaBoZzyJWDmKCAwEhPgmeyeAUhFfXxrtPIKR":String):
+  
+app/services/application_service/create_application.rb:5:in `initialize'
+app/controllers/api/v1/applications_controller.rb:17:in `new'
+app/controllers/api/v1/applications_controller.rb:17:in `create'
+Started POST "/api/v1/applications" for 172.20.0.1 at 2022-01-27 09:16:41 +0000
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app from solid s ", "application"=>{"name"=>"app from solid s "}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[36mApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('app from solid s ', '#<GenerateApplicationTokenHelper:0x00007fba642a62e8>', '2022-01-27 09:16:41', '2022-01-27 09:16:41')[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  Rendering api/v1/applications/show.json.jbuilder
+  Rendered api/v1/applications/_application.json.jbuilder (0.5ms)
+  Rendered api/v1/applications/show.json.jbuilder (2.3ms)
+Completed 201 Created in 49ms (Views: 5.4ms | ActiveRecord: 30.6ms)
+
+
+Started POST "/api/v1/applications" for 172.20.0.1 at 2022-01-27 09:17:51 +0000
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app from solid s ", "application"=>{"name"=>"app from solid s "}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[36mApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('app from solid s ', '#<GenerateApplicationTokenHelper:0x00007fba8421cfc8>', '2022-01-27 09:17:51', '2022-01-27 09:17:51')[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (19.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  Rendering api/v1/applications/show.json.jbuilder
+  Rendered api/v1/applications/_application.json.jbuilder (0.4ms)
+  Rendered api/v1/applications/show.json.jbuilder (2.3ms)
+Completed 201 Created in 51ms (Views: 6.5ms | ActiveRecord: 33.6ms)
+
+
+Started POST "/api/v1/applications" for 172.20.0.1 at 2022-01-27 09:17:53 +0000
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app from solid s ", "application"=>{"name"=>"app from solid s "}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[36mApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('app from solid s ', '#<GenerateApplicationTokenHelper:0x00007fba74153840>', '2022-01-27 09:17:53', '2022-01-27 09:17:53')[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (13.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  Rendering api/v1/applications/show.json.jbuilder
+  Rendered api/v1/applications/_application.json.jbuilder (0.4ms)
+  Rendered api/v1/applications/show.json.jbuilder (2.2ms)
+Completed 201 Created in 25ms (Views: 5.1ms | ActiveRecord: 15.3ms)
+
+
+Started POST "/api/v1/applications" for 172.20.0.1 at 2022-01-27 09:20:00 +0000
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app from solid s ", "application"=>{"name"=>"app from solid s "}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[36mApplication Create (0.4ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('app from solid s ', '#<GenerateApplicationTokenHelper:0x00007fba840642f8>', '2022-01-27 09:20:00', '2022-01-27 09:20:00')[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (18.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  Rendering api/v1/applications/show.json.jbuilder
+  Rendered api/v1/applications/_application.json.jbuilder (0.8ms)
+  Rendered api/v1/applications/show.json.jbuilder (4.9ms)
+Completed 201 Created in 65ms (Views: 17.8ms | ActiveRecord: 33.0ms)
+
+
+  [1m[35m (8.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE DATABASE `app_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE `app_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0)[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (17.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (10.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470')[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+Started POST "/api/v1/applications" for 172.20.0.1 at 2022-01-27 09:20:42 +0000
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app from solid s ", "application"=>{"name"=>"app from solid s "}}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[36mApplication Create (1.2ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('app from solid s ', '#<GenerateApplicationTokenHelper:0x0000565116f70720>', '2022-01-27 09:20:43', '2022-01-27 09:20:43')[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (55.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  Rendering api/v1/applications/show.json.jbuilder
+  Rendered api/v1/applications/_application.json.jbuilder (1.5ms)
+  Rendered api/v1/applications/show.json.jbuilder (4.3ms)
+Completed 201 Created in 120ms (Views: 11.5ms | ActiveRecord: 100.0ms)
+
+
+Started POST "/api/v1/applications" for 172.20.0.1 at 2022-01-27 09:20:53 +0000
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app from solid s ", "application"=>{"name"=>"app from solid s "}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[36mApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('app from solid s ', '#<GenerateApplicationTokenHelper:0x0000565117bcaa48>', '2022-01-27 09:20:53', '2022-01-27 09:20:53')[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  Rendering api/v1/applications/show.json.jbuilder
+  Rendered api/v1/applications/_application.json.jbuilder (0.5ms)
+  Rendered api/v1/applications/show.json.jbuilder (3.4ms)
+Completed 201 Created in 20ms (Views: 6.8ms | ActiveRecord: 8.6ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE `app_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE DATABASE `app_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0)[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (23.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (3.9ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (2.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470')[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+Started POST "/api/v1/applications" for 172.20.0.1 at 2022-01-27 09:22:10 +0000
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app from solid s ", "application"=>{"name"=>"app from solid s "}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[36mApplication Create (0.6ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('app from solid s ', '#<GenerateApplicationTokenHelper:0x000055b2bbfb87e0>', '2022-01-27 09:22:11', '2022-01-27 09:22:11')[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (10.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  [1m[35m (4.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  Rendering api/v1/applications/show.json.jbuilder
+  Rendered api/v1/applications/_application.json.jbuilder (0.5ms)
+  Rendered api/v1/applications/show.json.jbuilder (2.4ms)
+Completed 201 Created in 49ms (Views: 7.5ms | ActiveRecord: 28.7ms)
+
+
+Started POST "/api/v1/applications" for 172.20.0.1 at 2022-01-27 09:22:12 +0000
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app from solid s ", "application"=>{"name"=>"app from solid s "}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[36mApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('app from solid s ', '#<GenerateApplicationTokenHelper:0x000055b2bbe70c98>', '2022-01-27 09:22:12', '2022-01-27 09:22:12')[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (52.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/application_service/create_application.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  Rendering api/v1/applications/show.json.jbuilder
+  Rendered api/v1/applications/_application.json.jbuilder (0.5ms)
+  Rendered api/v1/applications/show.json.jbuilder (1.7ms)
+Completed 201 Created in 63ms (Views: 4.4ms | ActiveRecord: 54.2ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mApplication Create (0.7ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('dcsdc', '#<GenerateApplicationTokenHelper:0x000055ccc5704918>', '2022-01-27 09:23:01', '2022-01-27 09:23:01')[0m
+  [1m[35m (9.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mApplication Create (0.8ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('dcsdc', '#<GenerateApplicationTokenHelper:0x000055ccc7d10120>', '2022-01-27 09:23:23', '2022-01-27 09:23:23')[0m
+  [1m[35m (55.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mApplication Create (0.6ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('{:name=>\"Dsvsvd\"}', '#<GenerateApplicationTokenHelper:0x000055c3509c7c00>', '2022-01-27 09:26:29', '2022-01-27 09:26:29')[0m
+  [1m[35m (27.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mApplication Create (0.6ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('{:name=>\"dvdSD\"}', '#<GenerateApplicationTokenHelper:0x000055db33b96ea0>', '2022-01-27 09:30:10', '2022-01-27 09:30:10')[0m
+  [1m[35m (31.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('vdds', '#<GenerateApplicationTokenHelper:0x0000564f28c3cf08>', '2022-01-27 09:58:02', '2022-01-27 09:58:02')[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mApplication Create (5.8ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('vdds', '#<GenerateApplicationTokenHelper:0x0000564f260b82d8>', '2022-01-27 09:58:26', '2022-01-27 09:58:26')[0m
+  [1m[35m (48.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('VD', '#<GenerateApplicationTokenHelper:0x000055a60e732ee0>', '2022-01-27 09:58:59', '2022-01-27 09:58:59')[0m
+  [1m[35m (49.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('ascs', '#<GenerateApplicationTokenHelper:0x0000562ba2198790>', '2022-01-27 10:00:26', '2022-01-27 10:00:26')[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('DVds', '#<GenerateApplicationTokenHelper:0x00007ff8000dd040>', '2022-01-27 10:03:07', '2022-01-27 10:03:07')[0m
+  [1m[35m (32.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mApplication Create (0.6ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('sacssasc', 'KoQUymxAlaIElWUjmAQIXwkcFkLJMqdnWqnGYulvZFlcihIXYc', '2022-01-27 10:06:21', '2022-01-27 10:06:21')[0m
+  [1m[35m (17.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE DATABASE `app_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (3.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE `app_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0)[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (17.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (2.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (15.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470')[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+Started POST "/api/v1/applications" for 172.20.0.1 at 2022-01-27 10:07:23 +0000
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::ApplicationsController#create as */*
+  Parameters: {"name"=>"app from solidohuuuh s ", "application"=>{"name"=>"app from solidohuuuh s "}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/application_service/create_application.rb:13
+  [1m[36mApplication Create (0.5ms)[0m  [1m[32mINSERT INTO `applications` (`name`, `token`, `created_at`, `updated_at`) VALUES ('app from solidohuuuh s ', 'mkMbMLGnUlxFdCkbBRniQjJXSjgkQVgSEMPxzLdUrZCRuesXaV', '2022-01-27 10:07:23', '2022-01-27 10:07:23')[0m
+  ↳ app/services/application_service/create_application.rb:13
+  [1m[35m (13.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/application_service/create_application.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/applications_controller.rb:18
+  Rendering api/v1/applications/show.json.jbuilder
+  Rendered api/v1/applications/_application.json.jbuilder (0.5ms)
+  Rendered api/v1/applications/show.json.jbuilder (2.5ms)
+Completed 201 Created in 48ms (Views: 7.6ms | ActiveRecord: 26.3ms)
+
+
