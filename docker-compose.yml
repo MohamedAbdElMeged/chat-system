@@ -78,6 +78,14 @@ services:
       - REDIS_HOST=redis
       - RABBITMQ_HOST=rabbitmq
       - ES_HOST=es
+  rufus_worker:
+    build: .
+    restart: always
+    command: rake rufus_job
+    depends_on:
+      - web
+      - db
+
 volumes:
   mysql:
   bundle:
