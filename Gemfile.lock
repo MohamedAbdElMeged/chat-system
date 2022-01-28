@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/elastic/elasticsearch-rails.git
+  revision: bfdd2243f0de298547b2dc199e9a671cf72ccde6
+  branch: 5.x
+  specs:
+    elasticsearch-rails (5.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -57,15 +64,51 @@ GEM
     dotenv-rails (2.7.6)
       dotenv (= 2.7.6)
       railties (>= 3.2)
+    elasticsearch (7.16.3)
+      elasticsearch-api (= 7.16.3)
+      elasticsearch-transport (= 7.16.3)
+    elasticsearch-api (7.16.3)
+      multi_json
+    elasticsearch-model (7.2.0)
+      activesupport (> 3)
+      elasticsearch (~> 7)
+      hashie
+    elasticsearch-transport (7.16.3)
+      faraday (~> 1)
+      multi_json
     erubi (1.10.0)
     et-orbi (1.2.6)
       tzinfo
+    faraday (1.9.3)
+      faraday-em_http (~> 1.0)
+      faraday-em_synchrony (~> 1.0)
+      faraday-excon (~> 1.1)
+      faraday-httpclient (~> 1.0)
+      faraday-multipart (~> 1.0)
+      faraday-net_http (~> 1.0)
+      faraday-net_http_persistent (~> 1.0)
+      faraday-patron (~> 1.0)
+      faraday-rack (~> 1.0)
+      faraday-retry (~> 1.0)
+      ruby2_keywords (>= 0.0.4)
+    faraday-em_http (1.0.0)
+    faraday-em_synchrony (1.0.0)
+    faraday-excon (1.1.0)
+    faraday-httpclient (1.0.1)
+    faraday-multipart (1.0.3)
+      multipart-post (>= 1.2, < 3)
+    faraday-net_http (1.0.1)
+    faraday-net_http_persistent (1.2.0)
+    faraday-patron (1.0.0)
+    faraday-rack (1.0.0)
+    faraday-retry (1.0.3)
     ffi (1.15.5)
     fugit (1.5.2)
       et-orbi (~> 1.1, >= 1.1.8)
       raabro (~> 1.4)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    hashie (5.0.0)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.5)
@@ -86,6 +129,8 @@ GEM
     mini_portile2 (2.7.1)
     minitest (5.15.0)
     msgpack (1.4.4)
+    multi_json (1.15.0)
+    multipart-post (2.1.1)
     mysql2 (0.5.3)
     nio4r (2.5.8)
     nokogiri (1.13.1)
@@ -129,6 +174,7 @@ GEM
     redis (4.5.1)
     redis-namespace (1.8.1)
       redis (>= 3.0.4)
+    ruby2_keywords (0.0.5)
     ruby_dep (1.5.0)
     rufus-scheduler (3.8.1)
       fugit (~> 1.1, >= 1.1.6)
@@ -172,8 +218,12 @@ DEPENDENCIES
   bunny
   byebug
   dotenv-rails
+  elasticsearch-model
+  elasticsearch-rails!
+  faraday
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
+  multi_json
   mysql2 (>= 0.4.4, < 0.6.0)
   puma (~> 3.11)
   rails (~> 5.2.6)

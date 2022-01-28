@@ -17,6 +17,12 @@ class Api::V1::MessagesController < ApplicationController
         end
 
     end
+    def search 
+        @messages= @chat.messages.search(params['query']).records
+        @result = MapIndexedMessagesHelper.new.map_messages(@messages)
+        render json: @result 
+    end
+    
     def show
         render "show"
     end

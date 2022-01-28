@@ -1,12 +1,21 @@
 version: '3.7'
 services:
-  es:
-    image: elasticsearch:5.4.0-alpine
-    restart: always
-    ports:
-      - "9300:9200"
+  es01:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.16.3
+    container_name: es01
+    environment:
+      - cluster.name=es-docker-cluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - discovery.type=single-node
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
     volumes:
-      - ./volumes/es:/usr/share/elasticsearch/data
+      - data01:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
   db:
     image: mysql:8.0.20
     volumes:
@@ -34,23 +43,22 @@ services:
     volumes:
       - ./volumes/rabbitmq:/var/lib/rabbitmq
   web:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle install && rake db:create db:migrate && bundle exec rails s -p 3000 -b '0.0.0.0'"
-    tty: true
-    stdin_open: true
     environment:
       - REDIS_HOST=redis
       - RABBITMQ_HOST=rabbitmq
+      - ES_HOST=es01
     links:
       - db
       - redis
       - rabbitmq
+      - es01
     depends_on:
       - db
       - redis
       - rabbitmq
+      - es01
     ports:
       - '3000:3000'
     volumes:
@@ -65,19 +73,18 @@ services:
     volumes:
       - .:/app
     links:
-      - rabbitmq
       - db
       - redis
-      - es
+      - es01
+      - rabbitmq
     depends_on:
       - web
-      - rabbitmq
     environment:
       - WORKERS=ChatWorker,MessageWorker
       - MYSQL_HOST=db
       - REDIS_HOST=redis
       - RABBITMQ_HOST=rabbitmq
-      - ES_HOST=es
+      - ES_HOST=es01
   rufus_worker:
     build: .
     restart: always
@@ -93,4 +100,4 @@ volumes:
   tmp-data:
   redis:
   rabbitmq:
-
+  data01:
