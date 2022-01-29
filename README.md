@@ -267,3 +267,4 @@ class MapIndexedMessagesHelper
     end
 end
 ```
+
