@@ -8,7 +8,6 @@ class MapIndexedMessagesHelper
             m = {
                 number: message.number,
                 body:  message.body
-
             }
             @result << m
         end
