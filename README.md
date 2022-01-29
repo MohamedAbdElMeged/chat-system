@@ -11,6 +11,12 @@ docker-compose up
 ``` 
 
 # My Approach
+### Understand the requirements
+> Extract classes (Application, Chat, Message)
+> Define Relations between classes 
+### Setup The Docker
+> Add (RoR, MySQL, ElasticSearch , Redis , RabbitMQ, Sneakers, RufusScheduler) images<
+> Test Docker
 
 <ul>
   <li>Understand the requirements</li>
