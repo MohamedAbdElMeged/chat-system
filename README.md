@@ -23,14 +23,14 @@ docker-compose up
 ### Iniailize Models and Create Migrations
 
 -Create `Application`  Model
-`rails g model Application token chats_count:integer name`
+- `rails g model Application token chats_count:integer name`
 ```ruby
   class Application < ApplicationRecord
      has_many :chats, dependent: :destroy
   end
 ```
 -Create `Chat`  Model
-`rails g model Chat number:integer messages_count:integer application:references`
+- `rails g model Chat number:integer messages_count:integer application:references`
 ```ruby
 class Chat < ApplicationRecord
   belongs_to :application
@@ -39,7 +39,7 @@ end
 ```
 
 -Create `Message`  Model
-`rails g model Message number:integer body chat:references`
+- `rails g model Message number:integer body chat:references`
 
 ```ruby
 class Message < ApplicationRecord
