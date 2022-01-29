@@ -13,12 +13,17 @@ docker-compose up
 # My Approach
 
 <ul>
-  <li>Understanding the requirements</li>
+  <li>Understand the requirements</li>
       <ul>
-      <li>Indented item</li>
-      <li>Indented item</li>
+      <li>Extract classes (Application, Chat, Message)</li>
+      <li>Define Relations between classes and create migrations</li>
     </ul>
-  <li>Second item</li>
+  <li>Setup The Docker
+        <ul>
+        <li>Add (RoR, MySQL, ElasticSearch , Redis , RabbitMQ, Sneakers, RufusScheduler) images</li>
+        <li>Test Docker</li>
+        </ul>
+     </li>
   <li>Third item
     <ul>
       <li>Indented item</li>
