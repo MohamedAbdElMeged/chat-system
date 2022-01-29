@@ -211,10 +211,27 @@ class RedisService
 end
 ```
 ### Add ElasticSearch To `Message` Model
-- Include `elasticsearch-model` in `Message`
+- Include `elasticsearch-model` in `Message.rb`
 ```ruby 
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
 ```
-
+- Add `partial_search` method to search in message bodies for a specific chat
+```ruby
+    def self.partial_search(q,chat)
+      q = "*#{q}*"
+    __elasticsearch__.search({
+      "query": {
+        "bool": {
+          "must": {
+            "wildcard": { "body": q }
+          },
+          "filter": {
+            "term": { "chat_id": chat.id }
+          }
+        }
+      }
+    })
+    end
+  ```
 
