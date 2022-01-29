@@ -2,7 +2,8 @@
 # Instabug Challenge
 
 I applied at Instabug. I recently received this challenge to work on as part of the process.
-Build a chat system. System has multiple Application identified by token, each Application has many chats identified by a number ( number should start from 1) , each Chat has many messages identified by a number ( number should start from 1)
+
+The callenge is chat system that has multiple Application identified by token, each Application has many chats identified by a number ( number should start from 1) , each Chat has many messages identified by a number ( number should start from 1)
 - the endpoints should be RESTful
 - Use MySQL as datastore
 - use ElasticSearch for searching through messages of a specific chat
