@@ -210,4 +210,11 @@ class RedisService
     end
 end
 ```
+### Add ElasticSearch To `Message` Model
+- Include `elasticsearch-model` in `Message`
+```ruby 
+  include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
+```
+
 
