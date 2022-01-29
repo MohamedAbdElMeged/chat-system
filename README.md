@@ -20,18 +20,15 @@ docker-compose up
 - Add (RoR, MySQL, ElasticSearch , Redis , RabbitMQ, Sneakers, RufusScheduler) images
 - Test Docker
 
-<ul>
-  <li>Understand the requirements</li>
-      <ul>
-      <li>Extract classes (Application, Chat, Message)</li>
-      <li>Define Relations between classes </li>
-    </ul>
-  <li>Setup The Docker
-        <ul>
-        <li>Add (RoR, MySQL, ElasticSearch , Redis , RabbitMQ, Sneakers, RufusScheduler) images</li>
-        <li>Test Docker</li>
-        </ul>
-     </li>
+### Iniailize Models and Create Migrations
+-Create `Application`  Model
+```ruby
+  class Application < ApplicationRecord
+     has_many :chats, dependent: :destroy
+  end
+```
+
+
   <li>Iniailize Models and Create Migrations
     <ul>
       <li>
