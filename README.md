@@ -16,7 +16,7 @@ docker-compose up
   <li>Understand the requirements</li>
       <ul>
       <li>Extract classes (Application, Chat, Message)</li>
-      <li>Define Relations between classes and create migrations</li>
+      <li>Define Relations between classes </li>
     </ul>
   <li>Setup The Docker
         <ul>
@@ -24,9 +24,16 @@ docker-compose up
         <li>Test Docker</li>
         </ul>
      </li>
-  <li>Third item
+  <li>Iniailize Models and Create Migrations
     <ul>
-      <li>Indented item</li>
+      <li>
+        Create ```Application``` Model 
+        ```Ruby
+          class Application < ApplicationRecord
+             has_many :chats, dependent: :destroy
+          end
+        ```
+      </li>
       <li>Indented item</li>
     </ul>
   </li>
