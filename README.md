@@ -11,13 +11,7 @@ docker-compose up
 ``` 
 
 # My Approach
-        Create ``` Application ``` Model 
-        ``` ruby
-          class Application < ApplicationRecord
-             has_many :chats, dependent: :destroy
-          end
-          
-          ```
+
 <ul>
   <li>Understand the requirements</li>
       <ul>
@@ -33,7 +27,7 @@ docker-compose up
   <li>Iniailize Models and Create Migrations
     <ul>
       <li>
-        Create ``` Application ``` Model 
+              Create <code> Application </code> Model 
         ``` ruby
           class Application < ApplicationRecord
              has_many :chats, dependent: :destroy
