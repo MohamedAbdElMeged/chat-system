@@ -18,7 +18,7 @@ docker-compose up
 
 ### Setup The Docker
 - Add (RoR, MySQL, ElasticSearch , Redis , RabbitMQ, Sneakers, RufusScheduler) images
-```docker
+```docker-compose
 version: '3.7'
 services:
   es01:
