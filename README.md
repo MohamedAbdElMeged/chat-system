@@ -28,7 +28,7 @@ docker-compose up
     <ul>
       <li>
         Create ```Application``` Model 
-        ```Ruby
+        ```ruby
           class Application < ApplicationRecord
              has_many :chats, dependent: :destroy
           end
