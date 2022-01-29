@@ -21,13 +21,16 @@ docker-compose up
 - Test Docker
 
 ### Iniailize Models and Create Migrations
+
 -Create `Application`  Model
+`rails g model Application token chats_count:integer name`
 ```ruby
   class Application < ApplicationRecord
      has_many :chats, dependent: :destroy
   end
 ```
 -Create `Chat`  Model
+`rails g model Chat number:integer messages_count:integer application:references`
 ```ruby
 class Chat < ApplicationRecord
   belongs_to :application
@@ -36,29 +39,11 @@ end
 ```
 
 -Create `Message`  Model
+`rails g model Message number:integer body chat:references`
+
 ```ruby
 class Message < ApplicationRecord
   belongs_to :chat
   validates :body , presence: true
 end
 ```
-
-
-  <li>Iniailize Models and Create Migrations
-    <ul>
-      <li>
-               Create <code> Application </code> Model 
-        
-        </li>
-      <li>
-        ```
-          class Application < ApplicationRecord
-             has_many :chats, dependent: :destroy
-          end
-      ```
-      </li>
-      <li>Indented item</li>
-    </ul>
-  </li>
-  <li>Fourth item</li>
-</ul>
