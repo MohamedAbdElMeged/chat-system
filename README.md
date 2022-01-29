@@ -162,7 +162,12 @@ end
 ```
 
 ### Add Redis and RabbitMQ Publisher
--Create `PublisherService`  Service in `lib` folder
+- first I iniailized a `$bunny` , `sneakers` in `config/inializers`
+ ```ruby
+  $bunny = Bunny.new(:host => ENV['RABBITMQ_HOST'])
+  Sneakers.configure(:amqp => "amqp://guest:guest@#{ENV['RABBITMQ_HOST']}:5672")
+```
+- Create `PublisherService`  Service in `lib` folder
 ```ruby
 class PublisherService
 
