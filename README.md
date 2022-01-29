@@ -27,7 +27,8 @@ docker-compose up
   <li>Iniailize Models and Create Migrations
     <ul>
       <li>
-              ### Create <code> Application </code> Model
+              ### Create <code> Application </code> Model 
+        
         
         ```
           class Application < ApplicationRecord
