@@ -7,12 +7,12 @@ class Api::V1::ApplicationsController < ApplicationController
     render "index" 
   end
 
-  # GET /applications/1
+
   def show
     render "show" 
   end
 
-  # POST /applications
+
   def create
     @application = ApplicationService::CreateApplication.new(params[:name]).call
     if @application.save!
@@ -22,7 +22,7 @@ class Api::V1::ApplicationsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /applications/1
+
   def update
     if @application.update(application_params)
       render "show",status: :ok
@@ -31,18 +31,16 @@ class Api::V1::ApplicationsController < ApplicationController
     end
   end
 
-  # DELETE /applications/1
+
   def destroy
     @application.destroy
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_application
       @application = Application.find_by(token: params[:token])
     end
 
-    # Only allow a trusted parameter "white list" through.
     def application_params
       params.require(:application).permit(:name)
     end
