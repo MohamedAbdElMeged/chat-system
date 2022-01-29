@@ -27,8 +27,8 @@ docker-compose up
   <li>Iniailize Models and Create Migrations
     <ul>
       <li>
-        Create ```Application``` Model 
-        ```ruby
+        Create ``` Application ``` Model 
+        ``` ruby
           class Application < ApplicationRecord
              has_many :chats, dependent: :destroy
           end
