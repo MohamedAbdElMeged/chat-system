@@ -11,7 +11,6 @@ class MessageWorker
             message.body = raw_message['body']
             message.chat = Chat.find(raw_message['chat_id'])
             message.save!
-            puts message.inspect
         end
         ack!
     end

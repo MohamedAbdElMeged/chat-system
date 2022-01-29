@@ -11,6 +11,7 @@ WORKDIR $APP_ROOT
 # bundle install
 COPY Gemfile $APP_ROOT/Gemfile
 COPY Gemfile.lock $APP_ROOT/Gemfile.lock
+RUN bundle config set force_ruby_platform true
 RUN bundle install --jobs 4 --retry 3 
 # create app in container
 COPY . $APP_ROOT

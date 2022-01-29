@@ -32,6 +32,7 @@ gem 'elasticsearch-rails', git: 'git://github.com/elastic/elasticsearch-rails.gi
 # gem 'rack-cors'
 gem 'multi_json'
 gem "faraday"
+gem "nokogiri"
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
