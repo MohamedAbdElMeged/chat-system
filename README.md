@@ -18,6 +18,112 @@ docker-compose up
 
 ### Setup The Docker
 - Add (RoR, MySQL, ElasticSearch , Redis , RabbitMQ, Sneakers, RufusScheduler) images
+```docker
+version: '3.7'
+services:
+  es01:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.16.3
+    container_name: es01
+    environment:
+      - cluster.name=es-docker-cluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - discovery.type=single-node
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - data01:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+  db:
+    image: mysql:8.0.20
+    volumes:
+      - mysql:/var/lib/mysql:delegated
+    restart: always
+    platform: linux/x86_64
+    ports:
+      - '3307:3306'
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+  redis:
+    image: redis:alpine
+    restart: always
+    ports:
+      - '6380:6379'
+    volumes:
+      - ./volumes/redis-data:/data
+    command: redis-server 
+  rabbitmq:
+    image: rabbitmq:3.9-management-alpine
+    restart: always
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - ./volumes/rabbitmq:/var/lib/rabbitmq
+  web:
+    build: .
+    command: bash -c "bash ./init.sh && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    environment:
+      - REDIS_HOST=redis
+      - RABBITMQ_HOST=rabbitmq
+      - ES_HOST=es01
+    links:
+      - db
+      - redis
+      - rabbitmq
+      - es01
+    depends_on:
+      - db
+      - redis
+      - rabbitmq
+      - es01
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/app:cached
+      - bundle:/usr/local/bundle:delegated
+      - node_modules:/app/node_modules
+      - tmp-data:/app/tmp/sockets
+  worker:
+    build: .
+    command: rake sneakers:run
+    restart: always
+    volumes:
+      - .:/app
+    links:
+      - db
+      - redis
+      - es01
+      - rabbitmq
+    depends_on:
+      - web
+    environment:
+      - WORKERS=ChatWorker,MessageWorker
+      - MYSQL_HOST=db
+      - REDIS_HOST=redis
+      - RABBITMQ_HOST=rabbitmq
+      - ES_HOST=es01
+  rufus_worker:
+    build: .
+    restart: always
+    command: rake rufus_job
+    depends_on:
+      - web
+      - db
+
+volumes:
+  mysql:
+  bundle:
+  node_modules:
+  tmp-data:
+  redis:
+  rabbitmq:
+  data01:
+ ```
 - Test Docker
 
 ### Iniailize Models and Create Migrations
