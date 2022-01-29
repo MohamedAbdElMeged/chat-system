@@ -27,6 +27,21 @@ docker-compose up
      has_many :chats, dependent: :destroy
   end
 ```
+-Create `Chat`  Model
+```ruby
+class Chat < ApplicationRecord
+  belongs_to :application
+  has_many :messages, dependent: :destroy
+end
+```
+
+-Create `Message`  Model
+```ruby
+class Message < ApplicationRecord
+  belongs_to :chat
+  validates :body , presence: true
+end
+```
 
 
   <li>Iniailize Models and Create Migrations
