@@ -14,7 +14,11 @@ docker-compose up
 # My Approach
 
 <ul>
-  <li>First item</li>
+  <li>Understanding the requirements</li>
+      <ul>
+      <li>Indented item</li>
+      <li>Indented item</li>
+    </ul>
   <li>Second item</li>
   <li>Third item
     <ul>
