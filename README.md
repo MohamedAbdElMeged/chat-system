@@ -28,11 +28,11 @@ docker-compose up
     <ul>
       <li>
               Create <code> Application </code> Model 
-        <code>
+        ```
           class Application < ApplicationRecord
              has_many :chats, dependent: :destroy
           end
-      </code>
+      ```
       </li>
       <li>Indented item</li>
     </ul>
