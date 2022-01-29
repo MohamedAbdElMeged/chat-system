@@ -163,12 +163,12 @@ end
 ```
 
 ### Add Redis and RabbitMQ Publisher
-- Initialize  `$bunny` , `sneakers` in `config/inializers`
+- Initialize  `$bunny` , `sneakers` in `config/initalizers`
  ```ruby
   $bunny = Bunny.new(:host => ENV['RABBITMQ_HOST'])
   Sneakers.configure(:amqp => "amqp://guest:guest@#{ENV['RABBITMQ_HOST']}:5672")
 ```
-- Initialize  `$redis`  in `config/inializers`
+- Initialize  `$redis`  in `config/initalizers`
  ```ruby
  $redis = Redis::Namespace.new("instabug",:redis => Redis.new(host: ENV["REDIS_HOST"]))
  ```
