@@ -6,5 +6,8 @@ I applied at Instabug. I recently received this challenge to work on as part of 
 
 # How To Run The Challenge
 
-We will only write ```docker-compose up```   to run the whole stack if it doesn’t work the task fails.
+We will only write ```bash docker-compose up```   to run the whole stack if it doesn’t work the task fails.
+
+
+# My Approach
 
