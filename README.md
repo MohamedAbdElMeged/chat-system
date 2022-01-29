@@ -5,13 +5,19 @@ I applied at Instabug. I recently received this challenge to work on as part of 
 
 # How To Run The Challenge
 
-We will only write this command to run the whole stack if it doesn’t work the task fails.
+We will only write this command to run the whole stack 
 ``` bash
 docker-compose up
 ``` 
 
 # My Approach
-
+        Create ``` Application ``` Model 
+        ``` ruby
+          class Application < ApplicationRecord
+             has_many :chats, dependent: :destroy
+          end
+          
+          ```
 <ul>
   <li>Understand the requirements</li>
       <ul>
