@@ -488,3 +488,6 @@ example1: get messages that contains 'ge'
 example2: get messages that contains 'ld'
 
 ![GitHub Dark](./public/message_search2.png)
+
+### TODO
+- write specs to test scenarios
