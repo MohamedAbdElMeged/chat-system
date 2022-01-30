@@ -1,6 +1,5 @@
 class MapIndexedMessagesHelper
     def initialize
-        
     end
     def map_messages(messages)
         @result = []
@@ -13,6 +12,4 @@ class MapIndexedMessagesHelper
         end
         @result
     end
-    
-    
 end
