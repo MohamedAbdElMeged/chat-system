@@ -26,7 +26,7 @@ docker-compose up
 
 ### Setup The Docker
 - Add (RoR, MySQL, ElasticSearch , Redis , RabbitMQ, Sneakers, RufusScheduler) images
-```docker-compose
+```yml
 version: '3.7'
 services:
   es01:
@@ -234,4 +234,37 @@ end
     })
     end
   ```
+### Add `helpers` files
+- Create `GenerateApplicationTokenHelper` to create application's token 
+```ruby
+class GenerateApplicationTokenHelper
+    def initialize
+
+    end
+    def create_token
+        string = [('a'..'z'), ('A'..'Z')].map(&:to_a).flatten
+        token = (0...50).map { string[rand(string.length)] }.join
+        token  
+    end
+    
+end
+```
+- Create `MapIndexedMessagesHelper` to map the message search results
+```ruby
+class MapIndexedMessagesHelper
+    def initialize
+    end
+    def map_messages(messages)
+        @result = []
+        messages.each do |message|
+            m = {
+                number: message.number,
+                body:  message.body
+            }
+            @result << m
+        end
+        @result
+    end
+end
+```
 
