@@ -58,8 +58,6 @@ services:
     depends_on:
       - db
       - redis
-      - rabbitmq
-      - es01
     ports:
       - '3000:3000'
     volumes:
