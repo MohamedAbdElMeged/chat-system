@@ -47,10 +47,10 @@ services:
       - 9200:9200
   db:
     image: mysql:8.0.20
+    platform: linux/x86_64
     volumes:
       - mysql:/var/lib/mysql:delegated
     restart: always
-    platform: linux/x86_64
     ports:
       - '3307:3306'
     command: --default-authentication-plugin=mysql_native_password
@@ -63,7 +63,7 @@ services:
       - '6380:6379'
     volumes:
       - ./volumes/redis-data:/data
-    command: redis-server 
+    command: redis-server
   rabbitmq:
     image: rabbitmq:3.9-management-alpine
     restart: always
@@ -92,16 +92,16 @@ services:
     ports:
       - '3000:3000'
     volumes:
-      - .:/app:cached
+      - .:/myapp
       - bundle:/usr/local/bundle:delegated
-      - node_modules:/app/node_modules
-      - tmp-data:/app/tmp/sockets
+      - node_modules:/myapp/node_modules
+      - tmp-data:/myapp/tmp/sockets
   worker:
     build: .
     command: rake sneakers:run
     restart: always
     volumes:
-      - .:/app
+      - .:/myapp
     links:
       - db
       - redis
@@ -122,7 +122,6 @@ services:
     depends_on:
       - web
       - db
-
 volumes:
   mysql:
   bundle:
