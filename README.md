@@ -338,7 +338,7 @@ class Api::V1::ChatsController < ApplicationController
  end
 ```
 **_NOTE:_** 
-`get_new_chat_number` is a private method that returns the new chat number and increment the value
+`get_new_chat_number` is a private method that returns the new chat number from `Redis` and increment the value
 `set_application` is a private method that get the application by its token to assign it to new chat
 `PublisherService.publish("chats",@chat)` pushes the new created chat to chats queue 
 - In `app/workers` I created `ChatWorker` 
@@ -364,3 +364,71 @@ end
 **_NOTE:_** 
 `ChatWorker` consumes chats queue and add the new chat in DB To Avoid race conditions
 
+
+#### create `messages` create endopoint
+- In `chats` controller I wrote
+```ruby
+class Api::V1::MessagesController < ApplicationController
+    before_action :set_application
+    before_action :set_chat
+    def create
+        @message = @chat.messages.build(message_params)
+        @message.number = get_new_message_number
+        if @message.valid?
+            PublisherService.publish("messages",@message)
+            render "show",status: :created
+        else
+            render json: @message.errors , status: :unprocessable_entity
+        end
+    end
+        private
+    def set_application
+        @application = Application.find_by(token: params[:application_token])
+    end
+    def set_chat
+        @chat = @application.chats.find_by(number: params[:chat_number])
+    end
+    def message_params
+        params.require(:message).permit(:body)
+    end 
+    def get_new_message_number
+        redis= RedisService.new()
+        number = redis.get_from_redis("app_#{@application.token}_chat#{@chat.number}_message_ready_number")
+        if !number
+            redis.save_in_redis("app_#{@application.token}_chat#{@chat.number}_message_ready_number",1)
+            number = 1
+        end 
+        redis.increment_counter("app_#{@application.token}_chat#{@chat.number}_message_ready_number")
+        number
+    end
+end
+```
+**_NOTE:_** 
+`get_new_message_number` is a private method that returns the new chat number from `Redis` and increment the value
+`set_application` is a private method that get the application by its token to specify which chat
+`set_chat` is a private method that get the application's chat by its number to assign it to new message
+
+`PublisherService.publish("messages",@message)` pushes the new created chat to chats queue 
+- In `app/workers` I created `MessageWorker` 
+ ```ruby
+class MessageWorker
+    include Sneakers::Worker
+        
+    from_queue "messages", env: nil
+
+    def work(raw_message)
+        ActiveRecord::Base.connection_pool.with_connection do
+            raw_message= JSON.parse(raw_message)
+            message = Message.new
+            message.number = raw_message['number']
+            message.body = raw_message['body']
+            message.chat = Chat.find(raw_message['chat_id'])
+            message.save!
+        end
+        ack!
+    end
+    
+end
+ ```
+**_NOTE:_** 
+`MessageWorker` consumes messages queue and add the new message in DB To Avoid race conditions
