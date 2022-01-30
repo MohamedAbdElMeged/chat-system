@@ -451,3 +451,37 @@ Rails.application.routes.draw do
   end
 end
 ```
+## Testing With PostMan
+- create new application
+
+![GitHub Dark](./public/create_application.png)
+
+- list applications
+
+![GitHub Dark](./public/list_applications.png)
+
+- create chat for application1
+
+![GitHub Dark](./public/create_chat.png)
+
+- list chats for application1
+
+![GitHub Dark](./public/get_chats.png)
+
+- create message for chat 1
+
+![GitHub Dark](./public/create_message.png)
+
+- list all messages for chat 1
+
+![GitHub Dark](./public/list_messages.png)
+
+- partial search in specific chat messages 
+
+example1: get messages that contains 'ge'
+
+![GitHub Dark](./public/message_search.png)
+
+example2: get messages that contains 'ld'
+
+![GitHub Dark](./public/message_search2.png)
