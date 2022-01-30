@@ -13,6 +13,5 @@ class ChatWorker
             puts chat.inspect
         end
         ack!
-
     end
 end

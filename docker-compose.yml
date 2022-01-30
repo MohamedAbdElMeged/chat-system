@@ -22,7 +22,6 @@ services:
     volumes:
       - mysql:/var/lib/mysql:delegated
     restart: always
-    platform: linux/x86_64
     ports:
       - '3307:3306'
     command: --default-authentication-plugin=mysql_native_password

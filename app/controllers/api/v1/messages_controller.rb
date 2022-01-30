@@ -58,5 +58,5 @@ class Api::V1::MessagesController < ApplicationController
         end 
         redis.increment_counter("app_#{@application.token}_chat#{@chat.number}_message_ready_number")
         number
-      end
+    end
 end
