@@ -7,7 +7,7 @@ The callenge is chat system that has multiple Application identified by token, e
 - the endpoints should be RESTful
 - Use MySQL as datastore
 - use ElasticSearch for searching through messages of a specific chat
-- use Docker to contatinerize the applicatio
+- use Docker to contatinerize the application
 - use RabbitMQ , Sneakers to avoid race conditions
 - Personally I used `rufus-scheduler` to create a cron job to update chats_count and messages_count every 30 minutes
 
@@ -267,4 +267,101 @@ class MapIndexedMessagesHelper
     end
 end
 ```
+## Create APIs endpoints
+#### create `applications` create endopoint
+- In `applications` controller I wrote
+```ruby
+class Api::V1::ApplicationsController < ApplicationController
+  def create
+    @application = ApplicationService::CreateApplication.new(params[:name]).call
+    if @application.save!
+      render "show",status: :created
+    else
+      render json: @application.errors, status: :unprocessable_entity
+    end
+  end
+end
+```
+**_NOTE:_** 
+I Applied S from SOLID principles By create module named `ApplicationService` and class named `CreateApplication` that do one thing 
+```ruby
+module ApplicationService
+    class CreateApplication
+        def initialize(name)
+            @name = name
+            @token = GenerateApplicationTokenHelper.new.create_token
+        end
+        def call
+            create_application
+            @application
+        end
+        private
+        def create_application
+            @application = Application.create!({
+                name: @name,
+                token: @token
+            })
+        end
+        
+    end
+end
+```
+
+#### create `chats` create endopoint
+- In `chats` controller I wrote
+```ruby
+class Api::V1::ChatsController < ApplicationController
+  before_action :set_application
+    def create
+    @chat = @application.chats.build
+    @chat.number = get_new_chat_number
+    if @chat.valid?
+      PublisherService.publish("chats",@chat)
+      render "show", status: :created
+    else
+      render json: @chat.errors, status: :unprocessable_entity
+    end
+  end
+    private
+      def set_application
+       @application = Application.find_by(token: params[:application_token])
+      end
+      def get_new_chat_number
+        redis= RedisService.new()
+        number = redis.get_from_redis("app_#{@application.token}_chat_ready_number")
+        if !number
+            redis.save_in_redis("app_#{@application.token}_chat_ready_number",1)
+            number = 1
+        end 
+        redis.increment_counter("app_#{@application.token}_chat_ready_number")
+        number
+      end
+ end
+```
+**_NOTE:_** 
+`get_new_chat_number` is a private method that returns the new chat number and increment the value
+`set_application` is a private method that get the application by its token to assign it to new chat
+`PublisherService.publish("chats",@chat)` pushes the new created chat to chats queue 
+- In `app/workers` I created `ChatWorker` 
+ ```ruby
+ class ChatWorker
+    include Sneakers::Worker
+        
+    from_queue "chats", env: nil
+
+    def work(raw_chat)
+        ActiveRecord::Base.connection_pool.with_connection do
+            raw_chat= JSON.parse(raw_chat)
+            chat = Chat.new
+            chat.number = raw_chat['number']
+            chat.application= Application.find(raw_chat['application_id'])
+            chat.save!
+            puts chat.inspect
+        end
+        ack!
+    end
+end
+ ```
+**_NOTE:_** 
+`ChatWorker` consumes chats queue and add the new chat in DB To Avoid race conditions
 
