@@ -12,8 +12,11 @@ The callenge is chat system that has multiple Application identified by token, e
 - Personally I used `rufus-scheduler` to create a cron job to update chats_count and messages_count every 30 minutes
 
 # How To Run The Challenge
-
-We will only write this command to run the whole stack 
+- First run 
+ ``` bash
+docker-compose build
+``` 
+- Then run
 ``` bash
 docker-compose up
 ``` 
