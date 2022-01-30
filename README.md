@@ -451,7 +451,7 @@ Rails.application.routes.draw do
   end
 end
 ```
-## Testing With PostMan
+## Testing with postman
 - create new application
 
 ![GitHub Dark](./public/create_application.png)
