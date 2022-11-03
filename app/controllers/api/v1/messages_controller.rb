@@ -51,12 +51,6 @@ class Api::V1::MessagesController < ApplicationController
     end 
     def get_new_message_number
         redis= RedisService.new()
-        number = redis.get_from_redis("app_#{@application.token}_chat#{@chat.number}_message_ready_number")
-        if !number
-            redis.save_in_redis("app_#{@application.token}_chat#{@chat.number}_message_ready_number",1)
-            number = 1
-        end 
         redis.increment_counter("app_#{@application.token}_chat#{@chat.number}_message_ready_number")
-        number
     end
 end
