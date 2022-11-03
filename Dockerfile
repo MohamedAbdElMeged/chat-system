@@ -1,15 +1,19 @@
-FROM ruby:2.7.2
+FROM ruby:2.7.2-alpine
+
 ENV LANG C.UTF-8
 ENV APP_ROOT /app
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
-  echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
-  apt-get update -qq && \
-  apt-get install -y --no-install-recommends \
-  build-essential \
-  nodejs \
-  yarn && \
-  apt-get clean && \
-  rm --recursive --force /var/lib/apt/lists/*
+RUN apk update \
+    && mkdir -p /myapp \
+    && apk add --no-cache git \
+    # build-base for native extensions
+    build-base \
+    mysql-client \
+    mysql-dev \
+    gcompat \
+    # less is necessary for ruby console
+    less \
+    # bash is useful for development
+    bash 
 # create working directory
 WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       resources :applications, param: :token  do
         resources :chats , param: :number do
           resources :messages, param: :number
-          get "/messages_search", to: 'messages#search'
+          get "search", on: :collection
         end
       end
     end

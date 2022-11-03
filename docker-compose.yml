@@ -17,16 +17,14 @@ services:
     ports:
       - 9200:9200
   db:
-    image: mysql:8.0.20
+    image: mysql
     platform: linux/x86_64
-    volumes:
-      - mysql:/var/lib/mysql:delegated
-    restart: always
     ports:
-      - '3307:3306'
-    command: --default-authentication-plugin=mysql_native_password
+      - '3306:3306'
+    command: ['mysqld', '--character-set-server=utf8mb4','--default-authentication-plugin=mysql_native_password' ,'--collation-server=utf8mb4_unicode_ci']
     environment:
-      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+     - MYSQL_ALLOW_EMPTY_PASSWORD=1
+     - MYSQL_ROOT_HOST=%
   redis:
     image: redis:alpine
     restart: always
@@ -50,6 +48,8 @@ services:
       - REDIS_HOST=redis
       - RABBITMQ_HOST=rabbitmq
       - ES_HOST=es01
+      - MYSQL_USERNAME=root
+      - MYSQL_HOST=db
     links:
       - db
       - redis
@@ -67,7 +67,7 @@ services:
       - tmp-data:/myapp/tmp/sockets
   worker:
     build: .
-    command: rake sneakers:run
+    command: bundle exec rake sneakers:run
     restart: always
     volumes:
       - .:/myapp
@@ -84,18 +84,21 @@ services:
       - REDIS_HOST=redis
       - RABBITMQ_HOST=rabbitmq
       - ES_HOST=es01
-  rufus_worker:
-    build: .
-    restart: always
-    command: rake rufus_job
-    depends_on:
-      - web
-      - db
+  # rufus_worker:
+  #   build: .
+  #   restart: always
+  #   command: rake rufus_job
+  #   depends_on:
+  #     - web
+  #     - db
 volumes:
-  mysql:
   bundle:
   node_modules:
   tmp-data:
   redis:
   rabbitmq:
   data01:
+
+# networks:
+#   host:
+#     name: 'chat-system-default'
