@@ -67,7 +67,7 @@ services:
       - tmp-data:/myapp/tmp/sockets
   worker:
     build: .
-    command: rake sneakers:run
+    command: bundle exec rake sneakers:run
     restart: always
     volumes:
       - .:/myapp
@@ -84,13 +84,13 @@ services:
       - REDIS_HOST=redis
       - RABBITMQ_HOST=rabbitmq
       - ES_HOST=es01
-  rufus_worker:
-    build: .
-    restart: always
-    command: rake rufus_job
-    depends_on:
-      - web
-      - db
+  # rufus_worker:
+  #   build: .
+  #   restart: always
+  #   command: rake rufus_job
+  #   depends_on:
+  #     - web
+  #     - db
 volumes:
   mysql:
   bundle:

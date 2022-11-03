@@ -42,13 +42,7 @@ class Api::V1::ChatsController < ApplicationController
     end
     def get_new_chat_number
       redis= RedisService.new()
-      number = redis.get_from_redis("app_#{@application.token}_chat_ready_number")
-      if !number
-          redis.save_in_redis("app_#{@application.token}_chat_ready_number",1)
-          number = 1
-      end 
       redis.increment_counter("app_#{@application.token}_chat_ready_number")
-      number
     end
     
     def chat_params
