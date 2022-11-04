@@ -9,6 +9,7 @@ class ChatWorker
             chat = Chat.new
             chat.number = raw_chat['number']
             chat.application= Application.find(raw_chat['application_id'])
+            chat.application_token = chat.application.token
             chat.save!
             puts chat.inspect
         end

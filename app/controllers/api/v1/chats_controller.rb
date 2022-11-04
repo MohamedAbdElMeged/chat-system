@@ -38,7 +38,8 @@ class Api::V1::ChatsController < ApplicationController
 
   private
     def set_chat
-      @chat = @application.chats.find_by(number: params[:number])
+      @chat = Chat.find_by(number: params[:number],application_token: params[:application_token])
+      render json: "Chat Not Found" unless @chat
     end
     def get_new_chat_number
       redis= RedisService.new()

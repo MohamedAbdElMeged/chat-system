@@ -1,5 +1,4 @@
 class Api::V1::MessagesController < ApplicationController
-    before_action :set_application
     before_action :set_chat
     before_action :set_message,only: [:show,:update ,:destroy]
     def index
@@ -37,11 +36,8 @@ class Api::V1::MessagesController < ApplicationController
         @message.destroy
     end
     private
-    def set_application
-        @application = Application.find_by(token: params[:application_token])
-    end
     def set_chat
-        @chat = @application.chats.find_by(number: params[:chat_number])
+        @chat = Chat.find_by(number: params[:chat_number],application_token: params[:application_token])
     end
     def set_message
         @message = @chat.messages.find_by(number: params[:number])
@@ -51,6 +47,6 @@ class Api::V1::MessagesController < ApplicationController
     end 
     def get_new_message_number
         redis= RedisService.new()
-        redis.increment_counter("app_#{@application.token}_chat#{@chat.number}_message_ready_number")
+        redis.increment_counter("app_#{params[:application_token]}_chat#{@chat.number}_message_ready_number")
     end
 end

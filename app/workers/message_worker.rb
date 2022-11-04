@@ -10,6 +10,7 @@ class MessageWorker
             message.number = raw_message['number']
             message.body = raw_message['body']
             message.chat = Chat.find(raw_message['chat_id'])
+            message.chat_number = message.chat.number
             message.save!
         end
         ack!
