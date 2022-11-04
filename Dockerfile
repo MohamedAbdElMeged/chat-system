@@ -5,15 +5,12 @@ ENV APP_ROOT /app
 RUN apk update \
     && mkdir -p /myapp \
     && apk add --no-cache git \
-    # build-base for native extensions
+    # # build-base for native extensions
     build-base \
     mysql-client \
     mysql-dev \
     gcompat \
-    # less is necessary for ruby console
-    less \
-    # bash is useful for development
-    bash 
+    bash
 # create working directory
 WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile

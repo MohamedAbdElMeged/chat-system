@@ -2,18 +2,16 @@
 task :rufus_job => [:environment] do
     scheduler = Rufus::Scheduler.new
 
-    scheduler.every '30m' do
+    scheduler.every '1m' do
         ActiveRecord::Base.connection_pool.with_connection do
-            Application.all.each do |app|
-                app.chats_count = app.chats.size
-                app.save!
+            Application.find_each do |app|
+                app.update_column(:chats_count,app.chats.size)
             end
-            Chat.all.each do |chat|
-                chat.messages_count = chat.messages.size
-                chat.save!
+            Chat.find_each do |chat|
+                chat.update_column(:messages_count,chat.messages.size)
             end
         end
-
+        puts "done !"
     end
 
     scheduler.join
