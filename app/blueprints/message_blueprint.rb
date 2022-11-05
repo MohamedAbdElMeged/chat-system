@@ -1,5 +1,5 @@
 class MessageBlueprint < Blueprinter::Base
-    identifier :number
-  
-    fields  :body
+  identifier :number
+
+  fields :body
 end
