@@ -4,19 +4,20 @@ class Api::V1::ApplicationsController < ApplicationController
   def index
     @applications = Application.all
 
-    render "index" 
+    render json: ApplicationBlueprint.render_as_hash(@applications)
+
   end
 
 
   def show
-    render "show" 
+    render json: ApplicationBlueprint.render_as_hash(@application)
   end
 
 
   def create
     @application = ApplicationService::CreateApplication.new(params[:name]).call
-    if @application.save!
-      render "show",status: :created
+    unless @application.errors.present?
+      render json: ApplicationBlueprint.render_as_hash(@application), status: :created
     else
       render json: @application.errors, status: :unprocessable_entity
     end
@@ -25,7 +26,7 @@ class Api::V1::ApplicationsController < ApplicationController
 
   def update
     if @application.update(application_params)
-      render "show",status: :ok
+      render json: ApplicationBlueprint.render_as_hash(@application),status: :ok
     else
       render json: @application.errors, status: :unprocessable_entity
     end

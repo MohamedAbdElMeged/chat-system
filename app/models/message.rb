@@ -5,22 +5,53 @@ class Message < ApplicationRecord
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
 
-  
-    def self.partial_search(q,chat)
-      q = "*#{q}*"
-    __elasticsearch__.search({
-      "query": {
-        "bool": {
-          "must": {
-            "wildcard": { "body": q }
-          },
-          "filter": {
-            "term": { "chat_id": chat.id }
+    settings index: {
+      number_of_shards: 1,
+      number_of_replicas: 0,
+      analysis: {
+        analyzer: {
+          trigram: {
+            tokenizer: 'trigram'
           }
+        },
+        tokenizer: {
+          trigram: {
+            type: 'ngram',
+            min_gram: 3,
+            max_gram: 3,
+            token_chars: ['letter', 'digit']
+          }
+        }
+      } 
+      } do 
+      mappings dynamic: true do
+        indexes :body, type: :text, analyzer: "trigram"
+        indexes :chat_id, type: :integer
+      end
+    end
+
+    after_commit on: :update do
+      self.__elasticsearch__.index_document
+    end
+
+    def self.partial_search(q,chat)
+      q = "#{q}*"
+    __elasticsearch__.search({
+      query: {
+        bool: {
+          must: {
+            multi_match: {
+              query: q,
+              analyzer: 'trigram',
+              fields: [:body]
+            }
+          },
+          filter: [
+            { term: { chat_id: chat.id } }
+          ]
         }
       }
     })
-      
     end
     
 end

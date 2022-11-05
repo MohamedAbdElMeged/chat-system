@@ -14,6 +14,7 @@ gem 'puma', '~> 3.11'
 gem 'redis', '~> 4.0'
 gem 'redis-namespace'
 gem 'dotenv-rails'
+gem 'securerandom'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'jbuilder', '~> 2.5'
@@ -22,6 +23,9 @@ gem 'jbuilder', '~> 2.5'
 gem "bunny"
 gem "sneakers"
 gem "rufus-scheduler"
+gem "oj"
+gem 'blueprinter'
+# gem 'rubocop'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # Reduces boot times through caching; required in config/boot.rb

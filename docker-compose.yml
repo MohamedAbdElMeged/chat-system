@@ -16,14 +16,18 @@ services:
       - data01:/usr/share/elasticsearch/data
     ports:
       - 9200:9200
-  db:
-    image: mysql:5.7
-    ports:
-      - '3306:3306'
-    command: ['mysqld', '--character-set-server=utf8mb4','--default-authentication-plugin=mysql_native_password' ,'--collation-server=utf8mb4_unicode_ci']
+  db: 
+    image: mysql/mysql-server:latest
     environment:
-     - MYSQL_ALLOW_EMPTY_PASSWORD=1
-     - MYSQL_ROOT_HOST=%
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: chat_system_app
+        MYSQL_USER: root
+        MYSQL_PASSWORD: root
+    ports:
+        - "3306"
+    expose:
+        - "3306"
+    command: --default-authentication-plugin=mysql_native_password
   redis:
     image: redis:alpine
     restart: always
@@ -47,11 +51,15 @@ services:
       - REDIS_HOST=redis
       - RABBITMQ_HOST=rabbitmq
       - ES_HOST=es01
-      - MYSQL_USERNAME=root
-      - MYSQL_HOST=db
+      - DB_USER=root
+      - DB_NAME=chat_system_app
+      - DB_PASSWORD=root
+      - DB_HOST=db
     depends_on:
       - db
       - redis
+    links:
+      - db
     ports:
       - '3000:3000'
     volumes:
@@ -59,30 +67,34 @@ services:
   worker:
     build: .
     command: bundle exec rake sneakers:run
-    restart: always
     volumes:
       - .:/myapp
-    links:
-      - db
-      - redis
-      - es01
-      - rabbitmq
     depends_on:
       - web
+      - rabbitmq
+    links:
+      - db
+      - rabbitmq
     environment:
       - WORKERS=ChatWorker,MessageWorker
-      - MYSQL_HOST=db
+      - DB_USER=root
+      - DB_NAME=chat_system_app
+      - DB_PASSWORD=root
+      - DB_HOST=db
       - REDIS_HOST=redis
       - RABBITMQ_HOST=rabbitmq
       - ES_HOST=es01
-  rufus_worker:
-    build: .
-    command: bundle exec rake rufus_job
-    depends_on:
-      - web
-      - db
+  # rufus_worker:
+  #   build: .
+  #   command: bundle exec rake rufus_job
+  #   depends_on:
+  #     - web
+  #     - db
 volumes:
   redis:
   rabbitmq:
   data01:
   myapp:
+# networks:
+#   host:
+#     name: 'chat-system-default'

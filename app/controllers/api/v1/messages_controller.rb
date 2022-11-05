@@ -3,31 +3,30 @@ class Api::V1::MessagesController < ApplicationController
     before_action :set_message,only: [:show,:update ,:destroy]
     def index
         @messages = @chat.messages
-        render "index"
+        render json: MessageBlueprint.render_as_hash(@messages),status: :ok
     end
     def create
         @message = @chat.messages.build(message_params)
         @message.number = get_new_message_number
         if @message.valid?
             PublisherService.publish("messages",@message)
-            render "show",status: :created
+            render json: MessageBlueprint.render_as_hash(@message),status: :created
         else
             render json: @message.errors , status: :unprocessable_entity
         end
 
     end
     def search 
-        @messages= Message.partial_search(params['query'],@chat).records
-        @result = MapIndexedMessagesHelper.new.map_messages(@messages)
-        render json: @result 
+        @messages= Message.partial_search(params['query'],@chat).results.to_a
+        render json: MessageBlueprint.render_as_hash(@messages)
     end
     
     def show
-        render "show"
+        render json: MessageBlueprint.render_as_hash(@message),status: :ok
     end
     def update
         if @message.update(message_params)
-            render "show", status: :ok
+            render json: MessageBlueprint.render_as_hash(@message), status: :ok
           else
             render json: @message.errors, status: :unprocessable_entity
           end
@@ -38,9 +37,11 @@ class Api::V1::MessagesController < ApplicationController
     private
     def set_chat
         @chat = Chat.find_by(number: params[:chat_number],application_token: params[:application_token])
+        render json: "Chat Not Found" unless @chat
     end
     def set_message
         @message = @chat.messages.find_by(number: params[:number])
+        render json: "Message Not Found" unless @message
     end
     def message_params
         params.require(:message).permit(:body)

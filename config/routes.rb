@@ -5,8 +5,9 @@ Rails.application.routes.draw do
       root to: "applications#index"
       resources :applications, param: :token  do
         resources :chats , param: :number do
-          resources :messages, param: :number
-          get "search", on: :collection
+          resources :messages, param: :number do
+            get "search", on: :collection
+          end
         end
       end
     end

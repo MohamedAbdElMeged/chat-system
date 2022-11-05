@@ -6,12 +6,12 @@ class ChatWorker
     def work(raw_chat)
         ActiveRecord::Base.connection_pool.with_connection do
             raw_chat= JSON.parse(raw_chat)
+            application = Application.find(raw_chat['application_id'])
             chat = Chat.new
             chat.number = raw_chat['number']
-            chat.application= Application.find(raw_chat['application_id'])
-            chat.application_token = chat.application.token
+            chat.application= application
+            chat.application_token = application.token
             chat.save!
-            puts chat.inspect
         end
         ack!
     end

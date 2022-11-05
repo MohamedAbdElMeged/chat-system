@@ -11,7 +11,6 @@ task :rufus_job => [:environment] do
                 chat.update_column(:messages_count,chat.messages.size)
             end
         end
-        puts "done !"
     end
 
     scheduler.join

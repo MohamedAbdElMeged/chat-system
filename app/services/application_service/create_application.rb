@@ -2,7 +2,7 @@ module ApplicationService
     class CreateApplication
         def initialize(name)
             @name = name
-            @token = GenerateApplicationTokenHelper.new.create_token
+            @token = GenerateApplicationTokenHelper.create_token
         end
         def call
             create_application
@@ -10,10 +10,12 @@ module ApplicationService
         end
         private
         def create_application
-            @application = Application.create!({
+            @application = Application.new({
                 name: @name,
                 token: @token
             })
+            @application.save! if @application.valid?
+            @application
         end
         
     end

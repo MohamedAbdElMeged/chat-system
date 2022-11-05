@@ -4,7 +4,7 @@ class Api::V1::ChatsController < ApplicationController
 
   def index
     @chats = @application.chats
-    render "index",locals: {chats: @chats},status: :ok
+    render json: ChatBlueprint.render_as_hash(@chats)
   end
 
 
@@ -18,7 +18,7 @@ class Api::V1::ChatsController < ApplicationController
     @chat.number = get_new_chat_number
     if @chat.valid?
       PublisherService.publish("chats",@chat)
-      render "show", status: :created
+      render json: ChatBlueprint.render_as_hash(@chat), status: :created
     else
       render json: @chat.errors, status: :unprocessable_entity
     end
@@ -26,7 +26,7 @@ class Api::V1::ChatsController < ApplicationController
 
   def update
     if @chat.update(chat_params)
-      render "show", status: :ok
+      render json: ChatBlueprint.render_as_hash(@chat), status: :ok
     else
       render json: @chat.errors, status: :unprocessable_entity
     end
