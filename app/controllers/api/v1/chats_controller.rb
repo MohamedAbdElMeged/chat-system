@@ -9,7 +9,7 @@ class Api::V1::ChatsController < ApplicationController
 
 
   def show
-    render "show"
+    render json: ChatBlueprint.render_as_hash(@chat)
   end
 
 
