@@ -4,5 +4,4 @@
 require_relative 'config/application'
 
 Rails.application.load_tasks
-require 'sneakers/tasks'
 require 'elasticsearch/rails/tasks/import'

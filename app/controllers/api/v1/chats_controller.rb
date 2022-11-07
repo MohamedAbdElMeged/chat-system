@@ -17,7 +17,7 @@ module Api
         @chat = @application.chats.build
         @chat.number = new_chat_number
         if @chat.valid?
-          PublisherService.publish('chats', @chat)
+          ChatWorker.perform_async(@application.id, @application.token, @chat.number)
           render json: ChatBlueprint.render_as_hash(@chat), status: :created
         else
           render json: @chat.errors, status: :unprocessable_entity

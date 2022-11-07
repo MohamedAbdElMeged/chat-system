@@ -12,7 +12,7 @@ module Api
         @message = @chat.messages.build(message_params)
         @message.number = new_message_number
         if @message.valid?
-          PublisherService.publish('messages', @message)
+          MessageWorker.perform_async(@chat.application_token, @chat.id, @chat.number, @message.number, @message.body)
           render json: MessageBlueprint.render_as_hash(@message), status: :created
         else
           render json: @message.errors, status: :unprocessable_entity

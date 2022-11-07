@@ -1,9 +1,13 @@
 require 'elasticsearch/model'
 class Message < ApplicationRecord
-  belongs_to :chat
-  validates :body, presence: true
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
+
+  validates :body, presence: true
+
+  belongs_to :chat
+
+  after_save :reindex
 
   settings index: {
     number_of_shards: 1,
@@ -24,24 +28,19 @@ class Message < ApplicationRecord
       }
     }
   } do
-    mappings dynamic: true do
+    mappings dynamic: false do
       indexes :body, type: :text, analyzer: 'trigram'
       indexes :chat_id, type: :integer
     end
   end
 
-  after_commit on: :update do
-    __elasticsearch__.index_document
-  end
-
   def self.partial_search(value, chat)
-    query = "#{value}*"
     __elasticsearch__.search(
       query: {
         bool: {
           must: {
             multi_match: {
-              query: query,
+              query: value,
               analyzer: 'trigram',
               fields: [:body]
             }
@@ -52,5 +51,11 @@ class Message < ApplicationRecord
         }
       },
     )
+  end
+
+  private
+
+  def reindex
+    __elasticsearch__.index_document
   end
 end

@@ -17,14 +17,12 @@ gem 'redis-namespace'
 gem 'securerandom'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'jbuilder', '~> 2.5'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 gem 'blueprinter'
-gem 'bunny'
+
 gem 'oj'
 gem 'rufus-scheduler'
-gem 'sneakers'
 # gem 'rubocop'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -53,6 +51,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
-
+gem 'sidekiq', '~> 6.4', '>= 6.4.1'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data'
