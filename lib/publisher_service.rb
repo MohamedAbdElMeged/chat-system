@@ -1,3 +1,4 @@
+# Publisher RabbitMQ Service
 class PublisherService
   def self.publish(queue, message = {})
     @connection ||= BUNNY.tap(&:start)

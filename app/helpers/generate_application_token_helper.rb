@@ -1,6 +1,5 @@
 class GenerateApplicationTokenHelper
   def self.create_token
-    token = SecureRandom.base58(24)
-    token
+    SecureRandom.base58(24)
   end
 end

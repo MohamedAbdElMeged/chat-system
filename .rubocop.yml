@@ -57,7 +57,9 @@ AllCops:
     - "app/services/*"
     - "**/bin/*"
     - "db/schema.rb"
-    - "vendor/bundle/**/*"
+    - "vendor/**/*"
+    - "config/routes.rb"
+    - "node_modules/**/*"
     - ".git/**/*"
   # Default formatter will be used if no -f/--format option is given.
   DefaultFormatter: progress

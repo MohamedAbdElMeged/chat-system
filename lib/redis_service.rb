@@ -1,3 +1,4 @@
+# Redis Service
 class RedisService
   def initialize
     @redis = REDIS

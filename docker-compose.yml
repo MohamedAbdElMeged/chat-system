@@ -17,16 +17,11 @@ services:
     ports:
       - 9200:9200
   db: 
-    image: mysql/mysql-server:latest
+    image: mysql
     environment:
         MYSQL_ROOT_PASSWORD: root
-        MYSQL_DATABASE: chat_system_app
-        MYSQL_USER: root
-        MYSQL_PASSWORD: root
-    ports:
-        - "3306"
-    expose:
-        - "3306"
+    volumes:
+      - mysql_chat_system:/var/lib/mysql:delegated
     command: --default-authentication-plugin=mysql_native_password
   redis:
     image: redis:alpine
@@ -52,7 +47,6 @@ services:
       - RABBITMQ_HOST=rabbitmq
       - ES_HOST=es01
       - DB_USER=root
-      - DB_NAME=chat_system_app
       - DB_PASSWORD=root
       - DB_HOST=db
     depends_on:
@@ -60,6 +54,9 @@ services:
       - redis
     links:
       - db
+      - redis
+      - rabbitmq
+      - es01
     ports:
       - '3000:3000'
     volumes:
@@ -71,30 +68,35 @@ services:
       - .:/myapp
     depends_on:
       - web
-      - rabbitmq
     links:
       - db
+      - redis
+      - es01
       - rabbitmq
     environment:
       - WORKERS=ChatWorker,MessageWorker
       - DB_USER=root
-      - DB_NAME=chat_system_app
+      - DB_NAME=chat_system_app,chat_system_test
       - DB_PASSWORD=root
       - DB_HOST=db
-      - REDIS_HOST=redis
+      - RED IS_HOST=redis
       - RABBITMQ_HOST=rabbitmq
       - ES_HOST=es01
-  # rufus_worker:
-  #   build: .
-  #   command: bundle exec rake rufus_job
-  #   depends_on:
-  #     - web
-  #     - db
+  rufus_worker:
+    build: .
+    volumes:
+      - .:/myapp
+    restart: always
+    command: bundle exec rake rufus_job 
+    depends_on:
+      - web
+      - db
 volumes:
   redis:
   rabbitmq:
   data01:
   myapp:
+  mysql_chat_system:
 # networks:
 #   host:
 #     name: 'chat-system-default'
