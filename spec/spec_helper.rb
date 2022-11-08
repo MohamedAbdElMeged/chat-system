@@ -12,21 +12,20 @@
 # the additional setup, and require it from the spec files that actually need
 # it.
 #
-# See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+# See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+require 'sidekiq/testing'
+require 'webmock/rspec'
+require 'webmock/rspec'
+
+# Sidekiq::Testing.fake!
+
 RSpec.configure do |config|
+  config.before(:all, type: :request) do
+    WebMock.allow_net_connect!
+  end
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
-  config.before(:suite) do
-    DatabaseCleaner.clean_with(:truncation)
-  end
-  # start the transaction strategy as examples are run
-  config.before(:each) do
-    DatabaseCleaner.start
-  end
-  config.after(:each) do
-    DatabaseCleaner.clean
-  end
   config.expect_with :rspec do |expectations|
     # This option will default to `true` in RSpec 4. It makes the `description`
     # and `failure_message` of custom matchers include text for helper methods
@@ -61,7 +60,7 @@ RSpec.configure do |config|
   #   # is tagged with `:focus`, all examples get run. RSpec also provides
   #   # aliases for `it`, `describe`, and `context` that include `:focus`
   #   # metadata: `fit`, `fdescribe` and `fcontext`, respectively.
-  #   config.filter_run_when_matching :focus
+  config.filter_run_when_matching :focus
   #
   #   # Allows RSpec to persist some state between runs in order to support
   #   # the `--only-failures` and `--next-failure` CLI options. We recommend
@@ -70,7 +69,9 @@ RSpec.configure do |config|
   #
   #   # Limits the available syntax to the non-monkey patched syntax that is
   #   # recommended. For more details, see:
-  #   # https://relishapp.com/rspec/rspec-core/docs/configuration/zero-monkey-patching-mode
+  #   #   - http://rspec.info/blog/2012/06/rspecs-new-expectation-syntax/
+  #   #   - http://www.teaisaweso.me/blog/2013/05/27/rspecs-new-message-expectation-syntax/
+  #   #   - http://rspec.info/blog/2014/05/notable-changes-in-rspec-3/#zero-monkey-patching-mode
   #   config.disable_monkey_patching!
   #
   #   # Many RSpec users commonly either run the entire suite or an individual

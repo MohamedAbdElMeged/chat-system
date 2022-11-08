@@ -1,4 +1,4 @@
-class GenerateApplicationTokenHelper
+module GenerateApplicationTokenHelper
   def self.create_token
     SecureRandom.base58(24)
   end

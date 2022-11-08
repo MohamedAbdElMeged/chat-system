@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :application do
     name { Faker::Name.name }
-    sequence(:token) { |n| "ABCDEZSodf#{n}" }
+    token { Faker::Lorem.characters(number: 25) }
   end
 end

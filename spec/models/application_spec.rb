@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Application, type: :model do
+RSpec.describe 'Application', type: :model do
   it 'is valid with valid and unique attributes' do
     name = 'Test'
     token = 'token12345'
@@ -16,5 +16,4 @@ RSpec.describe Application, type: :model do
     name = 'Test'
     expect(Application.new(name: name)).to_not be_valid
   end
-
 end
