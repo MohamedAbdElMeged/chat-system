@@ -1,7 +1,7 @@
 module Api
   module V1
     class ChatsController < ApplicationController
-      before_action :set_application
+      before_action :set_application, only: %i(index create)
       before_action :set_chat, only: %i(show update destroy)
 
       def index
@@ -40,7 +40,7 @@ module Api
 
       def set_chat
         @chat = Chat.find_by(number: params[:number], application_token: params[:application_token])
-        render json: 'Chat Not Found' unless @chat
+        render json: { error: 'Chat Not Found' }, status: 404 unless @chat
       end
 
       def new_chat_number

@@ -39,10 +39,11 @@ class Message < ApplicationRecord
       query: {
         bool: {
           must: {
-            multi_match: {
-              query: value,
-              analyzer: 'trigram',
-              fields: [:body]
+            match: {
+              body: {
+                query: value,
+                analyzer: 'trigram'
+              }
             }
           },
           filter: [

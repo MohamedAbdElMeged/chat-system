@@ -44,12 +44,12 @@ module Api
 
       def set_chat
         @chat = Chat.find_by(number: params[:chat_number], application_token: params[:application_token])
-        render json: 'Chat Not Found' unless @chat
+        render json: { error: 'Chat Not Found' }, status: 404 unless @chat
       end
 
       def set_message
         @message = @chat.messages.find_by(number: params[:number])
-        render json: 'Message Not Found' unless @message
+        render json: { error: 'Message Not Found' }, status: 404 unless @message
       end
 
       def message_params

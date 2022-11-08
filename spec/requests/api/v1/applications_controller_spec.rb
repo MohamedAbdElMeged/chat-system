@@ -27,7 +27,6 @@ RSpec.describe 'Api::V1::ApplicationsControllers', type: :request do
       expect(json['chats_count']).to eq(application.chats_count)
     end
   end
-
   describe 'Create /applications' do
     context 'with valid paramter name' do
       before do

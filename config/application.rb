@@ -26,6 +26,9 @@ module App
     config.autoload_paths << "#{Rails.root}/app/helpers/"
     config.autoload_paths << "#{Rails.root}/lib/"
     config.autoload_paths << "#{Rails.root}/app/blueprints/"
+    config.eager_load_paths << "#{Rails.root}/app/helpers/"
+    config.eager_load_paths << "#{Rails.root}/lib/"
+    config.eager_load_paths << "#{Rails.root}/app/blueprints/"
     config.generators do |g|
       g.test_framework :rspec, fixture: true
       g.fixture_replacement :factory_bot, dir: 'spec/factories'
