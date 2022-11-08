@@ -5,12 +5,17 @@ RSpec.describe 'Api::V1::MessagesControllers', type: :request do
     let!(:application) { create :application }
     let!(:chat) { create :chat, application: application, application_token: application.token, number: 1, messages_count: 0 }
     before do
-      FactoryBot.create_list(:message, 10, chat: chat)
+      FactoryBot.create_list(:message, 100, chat: chat)
       get "/api/v1/applications/#{application.token}/chats/#{chat.number}/messages"
     end
     it 'returns http success' do
-      expect(json.size).to eq(10)
+      expect(json.size).to eq(100)
       expect(response.status).to eq(200)
+    end
+    it 'should  perform under 30 ms' do
+      expect do
+        get "/api/v1/applications/#{application.token}/chats/#{chat.number}/messages"
+      end .to perform_under(30).ms.sample(10).times
     end
   end
   describe 'GET /api/v1/applications/:application_token/chats/:chat_number/messages/:number' do
@@ -100,6 +105,12 @@ RSpec.describe 'Api::V1::MessagesControllers', type: :request do
     end
     it 'returns first message' do
       expect(json.first['body']).to match(first_message.body)
+    end
+    it 'should  perform under 30 ms' do
+      expect do
+        get "/api/v1/applications/#{application.token}/chats/#{chat.number}/messages/search",
+            params: { query: 'hel' }
+      end .to perform_under(30).ms.sample(10).times
     end
   end
 end

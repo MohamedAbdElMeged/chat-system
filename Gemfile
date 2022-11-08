@@ -20,7 +20,6 @@ gem 'securerandom'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 gem 'blueprinter'
-
 gem 'oj'
 gem 'rufus-scheduler'
 # gem 'rubocop'
@@ -52,6 +51,7 @@ end
 
 group :test do
   gem 'database_cleaner'
+  gem 'rspec-benchmark'
   gem 'rspec-rails', '~> 5.0.0'
   gem 'rspec-sidekiq'
   gem 'webmock'

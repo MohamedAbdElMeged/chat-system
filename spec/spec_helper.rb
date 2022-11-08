@@ -16,13 +16,14 @@
 require 'sidekiq/testing'
 require 'webmock/rspec'
 require 'webmock/rspec'
-
+require 'rspec-benchmark'
 # Sidekiq::Testing.fake!
 
 RSpec.configure do |config|
   config.before(:all, type: :request) do
     WebMock.allow_net_connect!
   end
+  config.include RSpec::Benchmark::Matchers
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.

@@ -1,5 +1,6 @@
 module ApplicationService
   class CreateApplication
+    attr_accessor :name, :token
     def initialize(name)
       @name = name
       @token = GenerateApplicationTokenHelper.create_token
