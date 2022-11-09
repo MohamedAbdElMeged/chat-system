@@ -7,7 +7,7 @@ class Message < ApplicationRecord
 
   belongs_to :chat
 
-  after_save :reindex
+  after_commit :reindex
 
   settings index: {
     number_of_shards: 1,
